@@ -8,7 +8,8 @@ namespace PurrTales
     ///  - Salto variable (corte al soltar), gravedad aumentada al caer, Coyote Time y Jump Buffer.
     ///  - Wall Slide y Wall Jump (capa Wall) detectados con Physics2D.OverlapBox.
     ///  - Bloqueo horizontal temporal (wall jump y salida de portales).
-    /// Durante el dash (PlayerDash.IsDashing) este script no toca la velocidad ni la gravedad.
+    ///  - Wavedash / Hyperdash con jump-cancel al hacer dash diagonal abajo tocando el suelo.
+    /// Durante el dash regular (PlayerDash.IsDashing) este script no toca la velocidad ni la gravedad.
     /// </summary>
     [DisallowMultipleComponent]
     [RequireComponent(typeof(Rigidbody2D))]
@@ -71,6 +72,12 @@ namespace PurrTales
         public bool IsWallSliding { get; private set; }
         public int FacingDirection { get; private set; }   // -1 / 1
         public bool IsHorizontalLocked { get { return Time.time < horizontalLockUntil; } }
+        public bool IsJumpRising { get { return isJumpRising; } set { isJumpRising = value; } }
+        public bool IsJumpBuffered { get { return Time.time - lastJumpPressedTime <= jumpBufferTime; } }
+
+        public float wavedashHorizontalSpeed { get { return dash != null ? dash.wavedashHorizontalSpeed : 25f; } }
+        public float wavedashJumpScale { get { return dash != null ? dash.wavedashJumpScale : 0.85f; } }
+        public float wavedashMinAirTime { get { return dash != null ? dash.wavedashMinAirTime : 0.05f; } }
 
         float lastGroundedTime = -999f;
         float lastJumpPressedTime = -999f;
@@ -145,9 +152,19 @@ namespace PurrTales
                 lastWallSide = WallSide;
             }
 
-            // Durante el dash, PlayerDash controla velocidad y gravedad.
+            // Durante el dash, comprobamos si cumple Jump-Cancel para Wavedash / Hyperdash.
             if (dash != null && dash.IsDashing)
             {
+                bool isDownDiagonal = dash.IsDownDiagonalDash;
+                bool touchesGround = IsGrounded || CheckGrounded();
+                bool jumpRequested = (now - lastJumpPressedTime <= jumpBufferTime) || (input != null && input.JumpPressed);
+
+                if (isDownDiagonal && touchesGround && jumpRequested)
+                {
+                    dash.ExecuteWavedash();
+                    return;
+                }
+
                 IsWallSliding = false;
                 pendingJumpCut = false;
                 return;
@@ -251,12 +268,44 @@ namespace PurrTales
             LockHorizontalControl(wallJumpControlLock);
         }
 
-        void ConsumeJump()
+        public void ConsumeJump()
         {
             lastJumpPressedTime = -999f;
             pendingJumpCut = false;
             // Si el botón ya se soltó antes de ejecutar el salto bufferizado, aplicar corte en el siguiente paso.
             if (input != null && !input.JumpHeld) pendingJumpCut = true;
+        }
+
+        /// <summary>Configura salto ascendente, orientación y limpia el buffer tras un Wavedash / Hyperdash.</summary>
+        public void OnWavedashExecuted(float dirX)
+        {
+            FacingDirection = (int)Mathf.Sign(dirX);
+            if (spriteRenderer != null) spriteRenderer.flipX = FacingDirection < 0;
+
+            isJumpRising = true;
+            lastGroundedTime = -999f;
+            ConsumeJump();
+        }
+
+        /// <summary>Comprueba si el collider del jugador está en contacto con el suelo dentro de groundCheckDepth.</summary>
+        public bool CheckGrounded()
+        {
+            if (bodyCollider == null) return false;
+            Bounds b = bodyCollider.bounds;
+            Vector2 groundCenter = new Vector2(b.center.x, b.min.y - groundCheckDepth * 0.5f);
+            Vector2 groundSize = new Vector2(b.size.x * 0.9f, groundCheckDepth);
+            return Physics2D.OverlapBox(groundCenter, groundSize, 0f, groundMask) != null;
+        }
+
+        /// <summary>Ejecuta Wavedash / Hyperdash delegando en PlayerDash.</summary>
+        public void ExecuteWavedash(bool isFromAir)
+        {
+            if (dash != null) dash.ExecuteWavedash(isFromAir);
+        }
+
+        public void ExecuteWavedash()
+        {
+            if (dash != null) dash.ExecuteWavedash();
         }
 
         void UpdateCollisionChecks()

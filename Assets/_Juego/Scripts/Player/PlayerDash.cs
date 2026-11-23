@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace PurrTales
@@ -8,6 +9,7 @@ namespace PurrTales
     ///  - Gravedad anulada y velocidad constante durante <see cref="dashDuration"/> (0.16 s).
     ///  - 1 carga; se recarga al tocar suelo o al cruzar un portal (<see cref="RechargeDash"/>).
     ///  - <see cref="RedirectDash"/> rota el dash al atravesar un portal sin perder velocidad ni reiniciar la duración.
+    ///  - Soporta Wavedash e Hyperdash con jump-cancel en suelo en dash diagonal hacia abajo.
     /// </summary>
     [DisallowMultipleComponent]
     [RequireComponent(typeof(Rigidbody2D))]
@@ -35,6 +37,16 @@ namespace PurrTales
         public float redirectedEndBrakeLock = 0.15f;
         [Range(0f, 1f)] public float inputDeadzone = 0.3f;
 
+        [Header("Wavedash / Hyper")]
+        [Tooltip("Velocidad horizontal al ejecutar Wavedash / Hyperdash (conservada por overspeedAirDeceleration).")]
+        public float wavedashHorizontalSpeed = 25f;
+        [Tooltip("Multiplicador aplicado a JumpVelocity de PlayerMovement para la altura vertical del salto.")]
+        [Range(0.1f, 1.5f)] public float wavedashJumpScale = 0.85f;
+        [Tooltip("Tiempo mínimo en el aire durante el dash antes de tocar suelo para recargar dash (Wavedash).")]
+        public float wavedashMinAirTime = 0.05f;
+        [Tooltip("Duración que permanece activo el TrailRenderer tras el salto de Wavedash como feedback visual.")]
+        public float wavedashTrailDuration = 0.2f;
+
         [Header("Feedback")]
         public Color normalTint = Color.white;
         public Color noChargeTint = new Color(0.55f, 0.75f, 1f, 1f);
@@ -44,10 +56,41 @@ namespace PurrTales
         public int Charges { get; private set; }
         public float CurrentDashSpeed { get; private set; }
 
+        /// <summary>Indica si el dash actual es en dirección diagonal hacia abajo.</summary>
+        public bool IsDownDiagonalDash
+        {
+            get { return IsDashing && DashDirection.y < -0.1f && Mathf.Abs(DashDirection.x) > 0.1f; }
+        }
+
+        /// <summary>Tiempo transcurrido en el aire durante este dash antes de tocar suelo.</summary>
+        public float CurrentDashAirTime
+        {
+            get
+            {
+                if (!dashStartedInAir) return 0f;
+                if (dashTouchedGround) return dashAirDuration;
+                return Time.time - dashStartTime;
+            }
+        }
+
+        /// <summary>
+        /// Cumple condición de recarga (Wavedash): se inició en el aire y voló al menos wavedashMinAirTime antes de tocar tierra.
+        /// </summary>
+        public bool CanWavedashRecharge
+        {
+            get { return dashStartedInAir && (CurrentDashAirTime >= wavedashMinAirTime); }
+        }
+
         float dashEndTime;
         float lastDashTime = -999f;
         float lastDashPressedTime = -999f;
         bool redirectedThisDash;
+
+        float dashStartTime;
+        bool dashStartedInAir;
+        bool dashTouchedGround;
+        float dashAirDuration;
+        Coroutine trailStopCoroutine;
 
         void Reset()
         {
@@ -90,6 +133,21 @@ namespace PurrTales
 
             if (IsDashing)
             {
+                // Seguimiento del tiempo en el aire antes del primer contacto con el suelo
+                if (dashStartedInAir && !dashTouchedGround)
+                {
+                    bool onGround = movement != null && (movement.IsGrounded || movement.CheckGrounded());
+                    if (onGround)
+                    {
+                        dashTouchedGround = true;
+                        dashAirDuration = Time.time - dashStartTime;
+                    }
+                    else
+                    {
+                        dashAirDuration = Time.time - dashStartTime;
+                    }
+                }
+
                 rb.gravityScale = 0f;
                 rb.linearVelocity = DashDirection * CurrentDashSpeed;
                 if (Time.time >= dashEndTime) EndDash();
@@ -125,6 +183,17 @@ namespace PurrTales
             CurrentDashSpeed = dashSpeed;
             dashEndTime = Time.time + dashDuration;
             lastDashTime = Time.time;
+            dashStartTime = Time.time;
+
+            dashStartedInAir = movement != null ? (!movement.IsGrounded && !movement.CheckGrounded()) : true;
+            dashTouchedGround = false;
+            dashAirDuration = 0f;
+
+            if (trailStopCoroutine != null)
+            {
+                StopCoroutine(trailStopCoroutine);
+                trailStopCoroutine = null;
+            }
 
             rb.gravityScale = 0f;
             rb.linearVelocity = DashDirection * CurrentDashSpeed;
@@ -140,6 +209,15 @@ namespace PurrTales
         void EndDash()
         {
             IsDashing = false;
+            dashStartedInAir = false;
+            dashTouchedGround = false;
+            dashAirDuration = 0f;
+
+            if (trailStopCoroutine != null)
+            {
+                StopCoroutine(trailStopCoroutine);
+                trailStopCoroutine = null;
+            }
             if (trail != null) trail.emitting = false;
 
             if (redirectedThisDash)
@@ -154,6 +232,87 @@ namespace PurrTales
             }
 
             if (movement != null) rb.gravityScale = movement.baseGravityScale;
+        }
+
+        /// <summary>
+        /// Ejecuta el impulso de Wavedash o Hyperdash cancelando el dash activo y lanzando al jugador:
+        ///  - Desactiva IsDashing inmediatamente.
+        ///  - Asigna velocidad horizontal = dirX * wavedashHorizontalSpeed y vertical = JumpVelocity * wavedashJumpScale.
+        ///  - Devuelve rb.gravityScale a baseGravityScale.
+        ///  - Mantiene el TrailRenderer emitiendo temporalmente durante wavedashTrailDuration como feedback visual.
+        ///  - Registra el salto en PlayerMovement como ascendente (isJumpRising = true).
+        ///  - Si <paramref name="isFromAir"/> es true (Wavedash genuino), recarga la carga de dash inmediatamente.
+        /// </summary>
+        /// <param name="isFromAir">Indica si se cumplen las condiciones para recargar el dash en el aire.</param>
+        public void ExecuteWavedash(bool isFromAir)
+        {
+            if (!IsDashing) return;
+
+            IsDashing = false;
+            redirectedThisDash = false;
+            lastDashPressedTime = -999f;
+
+            float dirX = Mathf.Sign(DashDirection.x);
+            if (Mathf.Abs(DashDirection.x) < 0.01f)
+            {
+                dirX = movement != null ? movement.FacingDirection : 1f;
+            }
+
+            if (movement != null && rb != null)
+            {
+                rb.gravityScale = movement.baseGravityScale;
+            }
+
+            float vx = dirX * wavedashHorizontalSpeed;
+            float jumpVel = movement != null ? movement.JumpVelocity : 14f;
+            float vy = jumpVel * wavedashJumpScale;
+
+            if (rb != null)
+            {
+                rb.linearVelocity = new Vector2(vx, vy);
+            }
+
+            // Feedback visual: mantiene el trail activo durante el despegue
+            if (trail != null)
+            {
+                trail.emitting = true;
+                if (trailStopCoroutine != null) StopCoroutine(trailStopCoroutine);
+                trailStopCoroutine = StartCoroutine(StopTrailRoutine(wavedashTrailDuration));
+            }
+
+            // Si es Wavedash (iniciado en el aire con tiempo mínimo), recarga inmediatamente el dash
+            if (isFromAir)
+            {
+                RechargeDash();
+            }
+
+            dashStartedInAir = false;
+            dashTouchedGround = false;
+            dashAirDuration = 0f;
+
+            // Notificar a PlayerMovement para salto ascendente, orientación y consumo de buffer
+            if (movement != null)
+            {
+                movement.OnWavedashExecuted(dirX);
+            }
+        }
+
+        /// <summary>
+        /// Ejecuta el Wavedash / Hyperdash evaluando automáticamente si cumple la recarga (CanWavedashRecharge).
+        /// </summary>
+        public void ExecuteWavedash()
+        {
+            ExecuteWavedash(CanWavedashRecharge);
+        }
+
+        IEnumerator StopTrailRoutine(float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            if (!IsDashing && trail != null)
+            {
+                trail.emitting = false;
+            }
+            trailStopCoroutine = null;
         }
 
         /// <summary>
@@ -181,6 +340,15 @@ namespace PurrTales
             IsDashing = false;
             redirectedThisDash = false;
             lastDashPressedTime = -999f;
+            dashStartedInAir = false;
+            dashTouchedGround = false;
+            dashAirDuration = 0f;
+
+            if (trailStopCoroutine != null)
+            {
+                StopCoroutine(trailStopCoroutine);
+                trailStopCoroutine = null;
+            }
             if (trail != null)
             {
                 trail.emitting = false;
