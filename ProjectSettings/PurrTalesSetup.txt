@@ -1,0 +1,2 @@
+Purr-tales: configuración inicial completada.
+Borra este archivo para que la escena se vuelva a generar automáticamente al abrir el proyecto.
