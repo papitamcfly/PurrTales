@@ -42,7 +42,11 @@ namespace PurrTales
         public float wavedashHorizontalSpeed = 25f;
         [Tooltip("Multiplicador aplicado a JumpVelocity de PlayerMovement para la altura vertical del salto.")]
         [Range(0.1f, 1.5f)] public float wavedashJumpScale = 0.85f;
-        [Tooltip("Tiempo mínimo en el aire durante el dash antes de tocar suelo para recargar dash (Wavedash).")]
+        [Tooltip("Multiplicador vertical para Wall Bounce a lo largo de una pared.")]
+        [Range(0.5f, 2f)] public float wallBounceVerticalScale = 1.2f;
+        [Tooltip("Multiplicador horizontal para Wall Wavedash alejándose de una pared.")]
+        [Range(0.5f, 2f)] public float wallWavedashHorizontalScale = 1.0f;
+        [Tooltip("Tiempo mínimo en el aire durante el dash antes de tocar superficie para recargar dash.")]
         public float wavedashMinAirTime = 0.05f;
         [Tooltip("Duración que permanece activo el TrailRenderer tras el salto de Wavedash como feedback visual.")]
         public float wavedashTrailDuration = 0.2f;
@@ -303,6 +307,83 @@ namespace PurrTales
         public void ExecuteWavedash()
         {
             ExecuteWavedash(CanWavedashRecharge);
+        }
+
+        /// <summary>
+        /// Ejecuta el impulso de Wall Wavedash / Wall Bounce cancelando el dash al contactar una pared:
+        ///  - Si el dash iba hacia arriba (DashDirection.y > 0.1f), ejecuta Wall Bounce (gran impulso vertical).
+        ///  - Si el dash iba horizontal o hacia abajo, ejecuta Wall Wavedash (impulso horizontal extremo alejándose de la pared).
+        ///  - Si isFromAir es true, recarga el dash inmediatamente.
+        /// </summary>
+        public void ExecuteWallWavedash(int wallSide, bool isFromAir)
+        {
+            if (!IsDashing) return;
+
+            IsDashing = false;
+            redirectedThisDash = false;
+            lastDashPressedTime = -999f;
+
+            int away = -wallSide;
+            if (away == 0) away = movement != null ? -movement.FacingDirection : -1;
+
+            bool isUpwardDash = DashDirection.y > 0.1f;
+            float jumpVel = movement != null ? movement.JumpVelocity : 14f;
+            float vx;
+            float vy;
+
+            if (isUpwardDash)
+            {
+                // Wall Bounce: salto vertical masivo a lo largo de la pared
+                vx = away * (wavedashHorizontalSpeed * 0.45f);
+                vy = jumpVel * wallBounceVerticalScale;
+            }
+            else
+            {
+                // Wall Wavedash: rebote horizontal a velocidad de wavedash
+                vx = away * (wavedashHorizontalSpeed * wallWavedashHorizontalScale);
+                vy = jumpVel * wavedashJumpScale;
+            }
+
+            if (movement != null && rb != null)
+            {
+                rb.gravityScale = movement.baseGravityScale;
+            }
+
+            if (rb != null)
+            {
+                rb.linearVelocity = new Vector2(vx, vy);
+            }
+
+            // Feedback visual: estela del trail
+            if (trail != null)
+            {
+                trail.emitting = true;
+                if (trailStopCoroutine != null) StopCoroutine(trailStopCoroutine);
+                trailStopCoroutine = StartCoroutine(StopTrailRoutine(wavedashTrailDuration));
+            }
+
+            // Recarga si inició en el aire y superó el tiempo mínimo
+            if (isFromAir)
+            {
+                RechargeDash();
+            }
+
+            dashStartedInAir = false;
+            dashTouchedGround = false;
+            dashAirDuration = 0f;
+
+            if (movement != null)
+            {
+                movement.OnWallWavedashExecuted(away);
+            }
+        }
+
+        /// <summary>
+        /// Ejecuta Wall Wavedash evaluando automáticamente si cumple la recarga (CanWavedashRecharge).
+        /// </summary>
+        public void ExecuteWallWavedash(int wallSide)
+        {
+            ExecuteWallWavedash(wallSide, CanWavedashRecharge);
         }
 
         IEnumerator StopTrailRoutine(float delay)

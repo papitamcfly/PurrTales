@@ -152,17 +152,33 @@ namespace PurrTales
                 lastWallSide = WallSide;
             }
 
-            // Durante el dash, comprobamos si cumple Jump-Cancel para Wavedash / Hyperdash.
+            // Durante el dash, comprobamos si cumple Jump-Cancel para Wavedash, Hyperdash o Wall Wavedash.
             if (dash != null && dash.IsDashing)
             {
-                bool isDownDiagonal = dash.IsDownDiagonalDash;
-                bool touchesGround = IsGrounded || CheckGrounded();
                 bool jumpRequested = (now - lastJumpPressedTime <= jumpBufferTime) || (input != null && input.JumpPressed);
 
-                if (isDownDiagonal && touchesGround && jumpRequested)
+                if (jumpRequested)
                 {
-                    dash.ExecuteWavedash();
-                    return;
+                    // 1. Suelo: Wavedash (iniciado en aire) o Hyperdash / Superdash (iniciado en suelo)
+                    bool touchesGround = IsGrounded || CheckGrounded() || (now - lastGroundedTime <= coyoteTime);
+                    bool validGroundDir = dash.DashDirection.y < -0.1f || (touchesGround && Mathf.Abs(dash.DashDirection.x) > 0.1f);
+
+                    if (touchesGround && validGroundDir)
+                    {
+                        dash.ExecuteWavedash();
+                        return;
+                    }
+
+                    // 2. Pared: Wall Wavedash / Wall Bounce
+                    int wallSide = WallSide;
+                    bool touchesWall = (IsTouchingWall && !IsGrounded) || CheckTouchingWall(out wallSide) || (now - lastWallTime <= wallCoyoteTime && lastWallSide != 0);
+                    if (wallSide == 0 && lastWallSide != 0) wallSide = lastWallSide;
+
+                    if (touchesWall && wallSide != 0)
+                    {
+                        dash.ExecuteWallWavedash(wallSide);
+                        return;
+                    }
                 }
 
                 IsWallSliding = false;
@@ -287,6 +303,38 @@ namespace PurrTales
             ConsumeJump();
         }
 
+        /// <summary>Configura salto ascendente, orientación y bloqueo temporal tras un Wall Wavedash / Wall Bounce.</summary>
+        public void OnWallWavedashExecuted(int away)
+        {
+            FacingDirection = away;
+            if (spriteRenderer != null) spriteRenderer.flipX = FacingDirection < 0;
+
+            isJumpRising = true;
+            lastWallTime = -999f;
+            lastGroundedTime = -999f;
+            ConsumeJump();
+            LockHorizontalControl(wallJumpControlLock);
+        }
+
+        /// <summary>Comprueba directamente si el collider del jugador está en contacto con una pared dentro de wallCheckDistance.</summary>
+        public bool CheckTouchingWall(out int wallSide)
+        {
+            wallSide = 0;
+            if (bodyCollider == null) return false;
+            Bounds b = bodyCollider.bounds;
+            Vector2 wallSize = new Vector2(wallCheckDistance, b.size.y * 0.7f);
+            Vector2 rightCenter = new Vector2(b.max.x + wallCheckDistance * 0.5f, b.center.y);
+            Vector2 leftCenter = new Vector2(b.min.x - wallCheckDistance * 0.5f, b.center.y);
+            bool right = Physics2D.OverlapBox(rightCenter, wallSize, 0f, wallMask) != null;
+            bool left = Physics2D.OverlapBox(leftCenter, wallSize, 0f, wallMask) != null;
+
+            if (right && left) wallSide = FacingDirection;
+            else if (right) wallSide = 1;
+            else if (left) wallSide = -1;
+
+            return right || left;
+        }
+
         /// <summary>Comprueba si el collider del jugador está en contacto con el suelo dentro de groundCheckDepth.</summary>
         public bool CheckGrounded()
         {
@@ -306,6 +354,16 @@ namespace PurrTales
         public void ExecuteWavedash()
         {
             if (dash != null) dash.ExecuteWavedash();
+        }
+
+        public void ExecuteWallWavedash(int wallSide, bool isFromAir)
+        {
+            if (dash != null) dash.ExecuteWallWavedash(wallSide, isFromAir);
+        }
+
+        public void ExecuteWallWavedash(int wallSide)
+        {
+            if (dash != null) dash.ExecuteWallWavedash(wallSide);
         }
 
         void UpdateCollisionChecks()
