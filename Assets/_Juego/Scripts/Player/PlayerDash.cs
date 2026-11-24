@@ -94,6 +94,8 @@ namespace PurrTales
         bool dashStartedInAir;
         bool dashTouchedGround;
         float dashAirDuration;
+        bool requireAirBeforeRecharge;
+        bool preservedMomentum;
         Coroutine trailStopCoroutine;
 
         void Reset()
@@ -158,7 +160,21 @@ namespace PurrTales
                 return;
             }
 
-            // Recarga al tocar el suelo (después de que el dash terminó).
+            // Si se ejecutó un Hyperdash, bloquear recarga por suelo hasta que haya despegado claramente al aire
+            if (requireAirBeforeRecharge)
+            {
+                bool clearlyInAir = movement != null && !movement.IsGrounded && !movement.CheckGrounded();
+                if (clearlyInAir)
+                {
+                    requireAirBeforeRecharge = false;
+                }
+                else
+                {
+                    return;
+                }
+            }
+
+            // Recarga al tocar el suelo (después de que el dash terminó y habiendo estado en el aire).
             if (movement != null && movement.IsGrounded && Charges < maxCharges && Time.time - lastDashTime > 0.02f)
             {
                 RechargeDash();
@@ -184,7 +200,24 @@ namespace PurrTales
             IsDashing = true;
             redirectedThisDash = false;
             DashDirection = direction.normalized;
-            CurrentDashSpeed = dashSpeed;
+
+            // Conservación de momentum estilo Celeste: si ya teníamos velocidad superior
+            // en la misma dirección horizontal (ej. tras un Wavedash previo), no frenamos a dashSpeed.
+            Vector2 prevVel = rb != null ? rb.linearVelocity : Vector2.zero;
+            float prevHorizontalSpeed = Mathf.Abs(prevVel.x);
+            bool sameHorizontalDir = Mathf.Abs(direction.x) > 0.1f && Mathf.Sign(direction.x) == Mathf.Sign(prevVel.x);
+
+            if (sameHorizontalDir && prevHorizontalSpeed > dashSpeed)
+            {
+                CurrentDashSpeed = prevHorizontalSpeed;
+                preservedMomentum = true;
+            }
+            else
+            {
+                CurrentDashSpeed = dashSpeed;
+                preservedMomentum = false;
+            }
+
             dashEndTime = Time.time + dashDuration;
             lastDashTime = Time.time;
             dashStartTime = Time.time;
@@ -229,6 +262,14 @@ namespace PurrTales
                 // Pasó por un portal: conserva toda la inercia.
                 rb.linearVelocity = DashDirection * CurrentDashSpeed;
                 if (movement != null) movement.LockHorizontalControl(redirectedEndBrakeLock);
+            }
+            else if (preservedMomentum || (movement != null && !movement.IsGrounded && CurrentDashSpeed > dashSpeed))
+            {
+                // Venía con momentum acumulado (ej. Wavedash previo): conserva la inercia horizontal
+                // completa para que overspeedAirDeceleration en PlayerMovement la desacelere suavemente.
+                float endVx = DashDirection.x * CurrentDashSpeed;
+                float endVy = DashDirection.y * CurrentDashSpeed * endSpeedMultiplier;
+                rb.linearVelocity = new Vector2(endVx, endVy);
             }
             else
             {
@@ -288,6 +329,14 @@ namespace PurrTales
             if (isFromAir)
             {
                 RechargeDash();
+            }
+            else
+            {
+                // Hyperdash (iniciado en suelo): NO recarga el dash en el aire.
+                // Bloquear recarga de suelo hasta que haya despegado claramente y vuelva a tocar tierra.
+                Charges = 0;
+                requireAirBeforeRecharge = true;
+                RefreshTint();
             }
 
             dashStartedInAir = false;
@@ -367,6 +416,12 @@ namespace PurrTales
             {
                 RechargeDash();
             }
+            else
+            {
+                Charges = 0;
+                requireAirBeforeRecharge = true;
+                RefreshTint();
+            }
 
             dashStartedInAir = false;
             dashTouchedGround = false;
@@ -424,6 +479,8 @@ namespace PurrTales
             dashStartedInAir = false;
             dashTouchedGround = false;
             dashAirDuration = 0f;
+            requireAirBeforeRecharge = false;
+            preservedMomentum = false;
 
             if (trailStopCoroutine != null)
             {
