@@ -1,0 +1,1 @@
+return {w=288,h=48,n=1,out='/Users/escuela/Downloads/pj/Purr-tales/UI/Pantallas/UI_Insignias_Niveles.aseprite',layers={'Insignias'},dur={100},tags={}}

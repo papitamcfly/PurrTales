@@ -1,0 +1,1 @@
+return {w=320,h=180,n=4,out='/Users/escuela/Downloads/pj/Purr-tales/UI/Pantallas/UI_Pantalla_Muerte.aseprite',layers={'Oscurecer','Panel','Botones','Texto'},dur={90,60,60,400},tags={{'Has_Muerto',1,4}}}

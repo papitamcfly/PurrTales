@@ -1,0 +1,1 @@
+return {w=56,h=56,n=4,out='/Users/escuela/Downloads/pj/Purr-tales/UI/Pantallas/UI_Selector_Nivel.aseprite',layers={'Selector'},dur={120,120,120,120},tags={{'Selector',1,4}}}

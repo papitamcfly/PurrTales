@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: b3dbdd19fbec5e623bbc0798ab94360d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7343949004382712529
+    second: N1_Fondo_3_Cercano_0
+  - first:
+      213: 5963823287969075130
+    second: N1_Fondo_3_Cercano_1
+  - first:
+      213: 2843902791337047164
+    second: N1_Fondo_3_Cercano_2
+  - first:
+      213: 197379218179815773
+    second: N1_Fondo_3_Cercano_3
+  - first:
+      213: 499229826314481356
+    second: N1_Fondo_3_Cercano_4
+  - first:
+      213: -5860159170389609335
+    second: N1_Fondo_3_Cercano_5
+  - first:
+      213: 5324758515088152670
+    second: N1_Fondo_3_Cercano_6
+  - first:
+      213: -187602614867886388
+    second: N1_Fondo_3_Cercano_7
+  - first:
+      213: -3439599813475553556
+    second: N1_Fondo_3_Cercano_8
+  - first:
+      213: -5852897937811399938
+    second: N1_Fondo_3_Cercano_9
+  - first:
+      213: -2790264125493245839
+    second: N1_Fondo_3_Cercano_10
+  - first:
+      213: -1209547522952975313
+    second: N1_Fondo_3_Cercano_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: N1_Fondo_3_Cercano_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 123
+        width: 36
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d2b0d6a5b2fae560800000000000000
+      internalID: 7343949004382712529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N1_Fondo_3_Cercano_1
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 157
+        width: 6
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abf4996cea1c3c250800000000000000
+      internalID: 5963823287969075130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N1_Fondo_3_Cercano_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 175
+        width: 26
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c74f2656582977720800000000000000
+      internalID: 2843902791337047164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N1_Fondo_3_Cercano_3
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 123
+        width: 69
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d59f6a96a5b3db200800000000000000
+      internalID: 197379218179815773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N1_Fondo_3_Cercano_4
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 114
+        width: 99
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cce21cac1ee9de600800000000000000
+      internalID: 499229826314481356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N1_Fondo_3_Cercano_5
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 171
+        width: 35
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 984fda178488caea0800000000000000
+      internalID: -5860159170389609335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N1_Fondo_3_Cercano_6
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 123
+        width: 5
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e58d09e58a755e940800000000000000
+      internalID: 5324758515088152670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N1_Fondo_3_Cercano_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 57
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cce7ddd6a60856df0800000000000000
+      internalID: -187602614867886388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N1_Fondo_3_Cercano_8
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 0
+        width: 21
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cee2a4481361440d0800000000000000
+      internalID: -3439599813475553556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N1_Fondo_3_Cercano_9
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 0
+        width: 120
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efa9226e55456cea0800000000000000
+      internalID: -5852897937811399938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N1_Fondo_3_Cercano_10
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 0
+        width: 28
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1788572bf8df649d0800000000000000
+      internalID: -2790264125493245839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N1_Fondo_3_Cercano_11
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 0
+        width: 38
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2c2f63bfe2d63fe0800000000000000
+      internalID: -1209547522952975313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      N1_Fondo_3_Cercano_0: 7343949004382712529
+      N1_Fondo_3_Cercano_1: 5963823287969075130
+      N1_Fondo_3_Cercano_10: -2790264125493245839
+      N1_Fondo_3_Cercano_11: -1209547522952975313
+      N1_Fondo_3_Cercano_2: 2843902791337047164
+      N1_Fondo_3_Cercano_3: 197379218179815773
+      N1_Fondo_3_Cercano_4: 499229826314481356
+      N1_Fondo_3_Cercano_5: -5860159170389609335
+      N1_Fondo_3_Cercano_6: 5324758515088152670
+      N1_Fondo_3_Cercano_7: -187602614867886388
+      N1_Fondo_3_Cercano_8: -3439599813475553556
+      N1_Fondo_3_Cercano_9: -5852897937811399938
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

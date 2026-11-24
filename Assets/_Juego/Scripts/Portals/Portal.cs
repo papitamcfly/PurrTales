@@ -21,7 +21,10 @@ namespace PurrTales
         [Tooltip("Ancho del portal a lo largo de la superficie (debe coincidir con el visual / trigger).")]
         public float width = 1.6f;
         public SpriteRenderer visual;
+        public Animator visualAnimator;
         public ParticleSystem particles;
+
+        static readonly int AnimIsWallHash = Animator.StringToHash("IsWall");
 
         /// <summary>Dirección de salida (normal de la superficie donde se colocó).</summary>
         public Vector2 ExitDirection { get; private set; }
@@ -35,6 +38,10 @@ namespace PurrTales
             if (ExitDirection == Vector2.zero) ExitDirection = transform.up;
             Collider2D col = GetComponent<Collider2D>();
             if (col != null) col.isTrigger = true;
+            if (visualAnimator == null)
+            {
+                visualAnimator = visual != null ? visual.GetComponent<Animator>() : GetComponentInChildren<Animator>();
+            }
         }
 
         /// <summary>Coloca y activa el portal en <paramref name="point"/> mirando hacia <paramref name="normal"/>.</summary>
@@ -45,6 +52,21 @@ namespace PurrTales
             float angle = Mathf.Atan2(ExitDirection.y, ExitDirection.x) * Mathf.Rad2Deg - 90f;
             transform.SetPositionAndRotation(new Vector3(point.x, point.y, 0f), Quaternion.Euler(0f, 0f, angle));
             gameObject.SetActive(true);
+
+            bool isWall = Mathf.Abs(ExitDirection.x) > Mathf.Abs(ExitDirection.y);
+            if (visual != null)
+            {
+                visual.transform.localRotation = isWall ? Quaternion.Euler(0f, 0f, 90f) : Quaternion.identity;
+            }
+            if (visualAnimator == null && visual != null)
+            {
+                visualAnimator = visual.GetComponent<Animator>();
+            }
+            if (visualAnimator != null && visualAnimator.runtimeAnimatorController != null)
+            {
+                visualAnimator.SetBool(AnimIsWallHash, isWall);
+            }
+
             if (particles != null)
             {
                 particles.Clear();

@@ -1,0 +1,1 @@
+return {w=320,h=180,n=10,out='/Users/escuela/Downloads/pj/Purr-tales/UI/Pantallas/UI_Transicion_Pata.aseprite',layers={'Transicion'},dur={40,40,40,40,120,60,40,40,40,40},tags={{'Cerrar',1,5},{'Abrir',6,10}}}

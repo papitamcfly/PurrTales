@@ -1,0 +1,1 @@
+return {w=320,h=180,n=8,out='/Users/escuela/Downloads/pj/Purr-tales/Nivel1_Grutas/Fondos/N1_Fondo_Parallax.aseprite',layers={'1_Lejano','2_Medio','3_Cercano','4_Particulas'},dur={120,120,120,120,120,120,120,120},tags={{'Particulas',1,8}}}

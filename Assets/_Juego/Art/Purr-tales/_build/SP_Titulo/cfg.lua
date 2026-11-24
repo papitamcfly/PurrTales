@@ -1,0 +1,1 @@
+return {w=320,h=180,n=20,out='/Users/escuela/Downloads/pj/Purr-tales/UI/Pantallas/UI_Pantalla_Titulo.aseprite',layers={'1_Cielo','2_Nubes','3_Montana','4_Fortaleza','5_Primer_Plano','6_Gato','7_Particulas','8_Logo','9_Menu'},dur={125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125,125},tags={{'Titulo',1,20}}}

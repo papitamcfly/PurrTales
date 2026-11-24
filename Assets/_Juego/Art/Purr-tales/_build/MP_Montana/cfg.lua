@@ -1,0 +1,1 @@
+return {w=320,h=180,n=8,out='/Users/escuela/Downloads/pj/Purr-tales/UI/Mapa/UI_Mapa_Montana.aseprite',layers={'Fondo','Terreno','Decoracion','Lugares'},dur={150,150,150,150,150,150,150,150},tags={{'Mapa',1,8}}}

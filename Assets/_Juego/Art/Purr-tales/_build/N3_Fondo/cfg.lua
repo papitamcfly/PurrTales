@@ -1,0 +1,1 @@
+return {w=320,h=180,n=8,out='/Users/escuela/Downloads/pj/Purr-tales/Nivel3_Fortaleza/Fondos/N3_Fondo_Parallax.aseprite',layers={'1_Salon_Lejano','2_Columnas','3_Cadenas_Estandartes','4_Particulas'},dur={120,120,120,120,120,120,120,120},tags={{'Particulas',1,8}}}

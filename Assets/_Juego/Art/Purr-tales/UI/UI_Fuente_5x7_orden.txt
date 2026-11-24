@@ -1,0 +1,2 @@
+Fuente bitmap 5x7 en celdas de 6x10 px (2 filas arriba para acentos y tilde), 16 caracteres por fila, en este orden (el ultimo es el espacio):
+ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚ0123456789.,:!¡?¿-+/()%'x 

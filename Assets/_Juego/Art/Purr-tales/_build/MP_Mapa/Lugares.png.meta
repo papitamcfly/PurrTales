@@ -1,0 +1,741 @@
+fileFormatVersion: 2
+guid: b35a82f2684b2c4e395074b955181b75
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6576568624116319693
+    second: Lugares_0
+  - first:
+      213: 5512397922375549474
+    second: Lugares_1
+  - first:
+      213: -7110061622735851548
+    second: Lugares_2
+  - first:
+      213: -7242258435313705967
+    second: Lugares_3
+  - first:
+      213: 1855062400917075334
+    second: Lugares_4
+  - first:
+      213: 744044959930563100
+    second: Lugares_5
+  - first:
+      213: -1968007754657184961
+    second: Lugares_6
+  - first:
+      213: 2405015413029502308
+    second: Lugares_7
+  - first:
+      213: 4042872848205780244
+    second: Lugares_8
+  - first:
+      213: 820777413564190446
+    second: Lugares_9
+  - first:
+      213: -6136396553146583768
+    second: Lugares_10
+  - first:
+      213: 1081376467103766477
+    second: Lugares_11
+  - first:
+      213: -3907371139105019113
+    second: Lugares_12
+  - first:
+      213: -6304975465541345157
+    second: Lugares_13
+  - first:
+      213: -4439870751051349172
+    second: Lugares_14
+  - first:
+      213: -2592042348546457284
+    second: Lugares_15
+  - first:
+      213: -4340012759206687512
+    second: Lugares_16
+  - first:
+      213: 217258556763961169
+    second: Lugares_17
+  - first:
+      213: -6308926994886115273
+    second: Lugares_18
+  - first:
+      213: 4917727334749282359
+    second: Lugares_19
+  - first:
+      213: 4492047789908906712
+    second: Lugares_20
+  - first:
+      213: -1256876718769387985
+    second: Lugares_21
+  - first:
+      213: 5503241396767261942
+    second: Lugares_22
+  - first:
+      213: 7436611839397967936
+    second: Lugares_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Lugares_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 92
+        width: 99
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33a31963ea55bb4a0800000000000000
+      internalID: -6576568624116319693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lugares_1
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 70
+        width: 21
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 222cbc754b8ff7c40800000000000000
+      internalID: 5512397922375549474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lugares_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 120
+        width: 41
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ef21b5ff9cf35d90800000000000000
+      internalID: -7110061622735851548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lugares_3
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 92
+        width: 99
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11cdc8ff2545e7b90800000000000000
+      internalID: -7242258435313705967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lugares_4
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 70
+        width: 21
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68578d2dc618eb910800000000000000
+      internalID: 1855062400917075334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lugares_5
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 120
+        width: 41
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1ab49de2f0635a00800000000000000
+      internalID: 744044959930563100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lugares_6
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 92
+        width: 99
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f33c174cf5b30b4e0800000000000000
+      internalID: -1968007754657184961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lugares_7
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 70
+        width: 21
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46d76fc96c4506120800000000000000
+      internalID: 2405015413029502308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lugares_8
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 120
+        width: 41
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41590657f6b2b1830800000000000000
+      internalID: 4042872848205780244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lugares_9
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 92
+        width: 99
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eee482f75bcf36b00800000000000000
+      internalID: 820777413564190446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lugares_10
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 70
+        width: 21
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82534c0d8d327daa0800000000000000
+      internalID: -6136396553146583768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lugares_11
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 120
+        width: 41
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc7df2eda22d10f00800000000000000
+      internalID: 1081376467103766477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lugares_12
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 70
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71b2800b6aa36c9c0800000000000000
+      internalID: -3907371139105019113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lugares_13
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 70
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b70ead2283a3088a0800000000000000
+      internalID: -6304975465541345157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lugares_14
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 70
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4300fa43196262c0800000000000000
+      internalID: -4439870751051349172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lugares_15
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 70
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c318e1c9737370cd0800000000000000
+      internalID: -2592042348546457284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lugares_16
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 70
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ec82dec36d25c3c0800000000000000
+      internalID: -4340012759206687512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lugares_17
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 70
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 157745c918bd30300800000000000000
+      internalID: 217258556763961169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lugares_18
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 70
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 730c0f303503278a0800000000000000
+      internalID: -6308926994886115273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lugares_19
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 70
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 730a5f9a4f64f3440800000000000000
+      internalID: 4917727334749282359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lugares_20
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 37
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d2599f3aa5f65e30800000000000000
+      internalID: 4492047789908906712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lugares_21
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 37
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f26ca43984dae8ee0800000000000000
+      internalID: -1256876718769387985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lugares_22
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 37
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f4898794e07f5c40800000000000000
+      internalID: 5503241396767261942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lugares_23
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 37
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 048b7cb2117243760800000000000000
+      internalID: 7436611839397967936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Lugares_0: -6576568624116319693
+      Lugares_1: 5512397922375549474
+      Lugares_10: -6136396553146583768
+      Lugares_11: 1081376467103766477
+      Lugares_12: -3907371139105019113
+      Lugares_13: -6304975465541345157
+      Lugares_14: -4439870751051349172
+      Lugares_15: -2592042348546457284
+      Lugares_16: -4340012759206687512
+      Lugares_17: 217258556763961169
+      Lugares_18: -6308926994886115273
+      Lugares_19: 4917727334749282359
+      Lugares_2: -7110061622735851548
+      Lugares_20: 4492047789908906712
+      Lugares_21: -1256876718769387985
+      Lugares_22: 5503241396767261942
+      Lugares_23: 7436611839397967936
+      Lugares_3: -7242258435313705967
+      Lugares_4: 1855062400917075334
+      Lugares_5: 744044959930563100
+      Lugares_6: -1968007754657184961
+      Lugares_7: 2405015413029502308
+      Lugares_8: 4042872848205780244
+      Lugares_9: 820777413564190446
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

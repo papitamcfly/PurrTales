@@ -19,6 +19,7 @@ namespace PurrTales
         public Rigidbody2D rb;
         public Collider2D bodyCollider;
         public SpriteRenderer spriteRenderer;
+        public Animator animator;
         public PlayerInputReader input;
         public PlayerDash dash;
 
@@ -87,6 +88,10 @@ namespace PurrTales
         bool isJumpRising;
         bool pendingJumpCut;
 
+        static readonly int AnimSpeedHash = Animator.StringToHash("Speed");
+        static readonly int AnimIsGroundedHash = Animator.StringToHash("IsGrounded");
+        static readonly int AnimIsDashingHash = Animator.StringToHash("IsDashing");
+
         public float JumpVelocity
         {
             get { return Mathf.Sqrt(2f * Mathf.Abs(Physics2D.gravity.y) * baseGravityScale * jumpHeight); }
@@ -97,6 +102,7 @@ namespace PurrTales
             rb = GetComponent<Rigidbody2D>();
             bodyCollider = GetComponent<Collider2D>();
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+            animator = GetComponentInChildren<Animator>();
             input = GetComponent<PlayerInputReader>();
             dash = GetComponent<PlayerDash>();
         }
@@ -106,6 +112,7 @@ namespace PurrTales
             if (rb == null) rb = GetComponent<Rigidbody2D>();
             if (bodyCollider == null) bodyCollider = GetComponent<Collider2D>();
             if (spriteRenderer == null) spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+            if (animator == null) animator = GetComponentInChildren<Animator>();
             if (input == null) input = GetComponent<PlayerInputReader>();
             if (dash == null) dash = GetComponent<PlayerDash>();
             FacingDirection = 1;
@@ -114,7 +121,11 @@ namespace PurrTales
 
         void Update()
         {
-            if (input == null) return;
+            if (input == null)
+            {
+                UpdateAnimator();
+                return;
+            }
 
             if (input.JumpPressed) lastJumpPressedTime = Time.time;
             if (input.JumpReleased) pendingJumpCut = true;
@@ -132,6 +143,17 @@ namespace PurrTales
             }
 
             if (spriteRenderer != null) spriteRenderer.flipX = FacingDirection < 0;
+            UpdateAnimator();
+        }
+
+        void UpdateAnimator()
+        {
+            if (animator == null || animator.runtimeAnimatorController == null) return;
+            float speed = rb != null ? Mathf.Abs(rb.linearVelocity.x) : 0f;
+            bool dashing = dash != null && dash.IsDashing;
+            animator.SetFloat(AnimSpeedHash, speed);
+            animator.SetBool(AnimIsGroundedHash, IsGrounded);
+            animator.SetBool(AnimIsDashingHash, dashing);
         }
 
         void FixedUpdate()

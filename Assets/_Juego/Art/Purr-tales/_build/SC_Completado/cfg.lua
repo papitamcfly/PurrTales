@@ -1,0 +1,1 @@
+return {w=320,h=180,n=6,out='/Users/escuela/Downloads/pj/Purr-tales/UI/Pantallas/UI_Nivel_Completado.aseprite',layers={'Panel','Estrellas','Texto'},dur={200,120,200,120,200,600},tags={{'Completado',1,6}}}

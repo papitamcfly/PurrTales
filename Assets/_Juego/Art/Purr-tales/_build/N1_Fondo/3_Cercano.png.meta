@@ -1,0 +1,2067 @@
+fileFormatVersion: 2
+guid: 7d2f525c5f62803ad8acc5c091cfac6e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4808197555112262809
+    second: 3_Cercano_0
+  - first:
+      213: -7462291209879371738
+    second: 3_Cercano_1
+  - first:
+      213: -7183723273596769839
+    second: 3_Cercano_2
+  - first:
+      213: -2083167850606853311
+    second: 3_Cercano_3
+  - first:
+      213: -5106265358960635538
+    second: 3_Cercano_4
+  - first:
+      213: -400783101781645380
+    second: 3_Cercano_5
+  - first:
+      213: 601897198500584900
+    second: 3_Cercano_6
+  - first:
+      213: 7920454702335200981
+    second: 3_Cercano_7
+  - first:
+      213: 8843749569591470037
+    second: 3_Cercano_8
+  - first:
+      213: -4842472728951685065
+    second: 3_Cercano_9
+  - first:
+      213: -1581635524622997332
+    second: 3_Cercano_10
+  - first:
+      213: 5185504070931117289
+    second: 3_Cercano_11
+  - first:
+      213: 1536298273317836632
+    second: 3_Cercano_12
+  - first:
+      213: 7537401732239291642
+    second: 3_Cercano_13
+  - first:
+      213: -563332410185285358
+    second: 3_Cercano_14
+  - first:
+      213: 7809662278174893244
+    second: 3_Cercano_15
+  - first:
+      213: 1062916577902892650
+    second: 3_Cercano_16
+  - first:
+      213: -8787641214316297231
+    second: 3_Cercano_17
+  - first:
+      213: 1868904053418044468
+    second: 3_Cercano_18
+  - first:
+      213: 2099874597471587837
+    second: 3_Cercano_19
+  - first:
+      213: 7446808311796602391
+    second: 3_Cercano_20
+  - first:
+      213: -6898829928640968897
+    second: 3_Cercano_21
+  - first:
+      213: -1186285847883552020
+    second: 3_Cercano_22
+  - first:
+      213: -2402318070396702850
+    second: 3_Cercano_23
+  - first:
+      213: 8623697363588308684
+    second: 3_Cercano_24
+  - first:
+      213: 529871586488715962
+    second: 3_Cercano_25
+  - first:
+      213: 4830112662646840333
+    second: 3_Cercano_26
+  - first:
+      213: 3209729711215434630
+    second: 3_Cercano_27
+  - first:
+      213: 5579572881556710762
+    second: 3_Cercano_28
+  - first:
+      213: -4101991909566202936
+    second: 3_Cercano_29
+  - first:
+      213: 269429989198507328
+    second: 3_Cercano_30
+  - first:
+      213: -6169867132337708229
+    second: 3_Cercano_31
+  - first:
+      213: 3838068042382950442
+    second: 3_Cercano_32
+  - first:
+      213: -2659612256612788036
+    second: 3_Cercano_33
+  - first:
+      213: 895209283975261557
+    second: 3_Cercano_34
+  - first:
+      213: 8341160937244596479
+    second: 3_Cercano_35
+  - first:
+      213: -5966965133395438974
+    second: 3_Cercano_36
+  - first:
+      213: 3097617142103710609
+    second: 3_Cercano_37
+  - first:
+      213: 5442694176880295607
+    second: 3_Cercano_38
+  - first:
+      213: -9013537515392974366
+    second: 3_Cercano_39
+  - first:
+      213: -7025404832720343503
+    second: 3_Cercano_40
+  - first:
+      213: 4783773355113433104
+    second: 3_Cercano_41
+  - first:
+      213: -7291344377019445453
+    second: 3_Cercano_42
+  - first:
+      213: -2414088293467086592
+    second: 3_Cercano_43
+  - first:
+      213: -4889630123636920345
+    second: 3_Cercano_44
+  - first:
+      213: 1802893015652231423
+    second: 3_Cercano_45
+  - first:
+      213: 2194307798289058269
+    second: 3_Cercano_46
+  - first:
+      213: -2104541007425226590
+    second: 3_Cercano_47
+  - first:
+      213: 2347211524508344122
+    second: 3_Cercano_48
+  - first:
+      213: 3896468329454465088
+    second: 3_Cercano_49
+  - first:
+      213: -4107489676026251791
+    second: 3_Cercano_50
+  - first:
+      213: 5270758535028444974
+    second: 3_Cercano_51
+  - first:
+      213: -4864539374693651694
+    second: 3_Cercano_52
+  - first:
+      213: 305684683378499337
+    second: 3_Cercano_53
+  - first:
+      213: -4602903262094308240
+    second: 3_Cercano_54
+  - first:
+      213: -4473956509286174452
+    second: 3_Cercano_55
+  - first:
+      213: 4096632823827960745
+    second: 3_Cercano_56
+  - first:
+      213: -6876835713477881986
+    second: 3_Cercano_57
+  - first:
+      213: -5779458068536616244
+    second: 3_Cercano_58
+  - first:
+      213: -2689046029564227525
+    second: 3_Cercano_59
+  - first:
+      213: 6225288596526785549
+    second: 3_Cercano_60
+  - first:
+      213: -6731649253715892713
+    second: 3_Cercano_61
+  - first:
+      213: 8817726356980427045
+    second: 3_Cercano_62
+  - first:
+      213: 3871048135260068603
+    second: 3_Cercano_63
+  - first:
+      213: -9220983865402070765
+    second: 3_Cercano_64
+  - first:
+      213: -1167837158067806891
+    second: 3_Cercano_65
+  - first:
+      213: 4815579349526004379
+    second: 3_Cercano_66
+  - first:
+      213: -3536800996971247555
+    second: 3_Cercano_67
+  - first:
+      213: 8510166979834225816
+    second: 3_Cercano_68
+  - first:
+      213: 4786935328099149459
+    second: 3_Cercano_69
+  - first:
+      213: 8002728305794194327
+    second: 3_Cercano_70
+  - first:
+      213: -5673288416218487204
+    second: 3_Cercano_71
+  - first:
+      213: 7280844617388626172
+    second: 3_Cercano_72
+  - first:
+      213: -6537031100159190607
+    second: 3_Cercano_73
+  - first:
+      213: -7410031505110587519
+    second: 3_Cercano_74
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 3_Cercano_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 123
+        width: 36
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99c3e5293362ab240800000000000000
+      internalID: 4808197555112262809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_1
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 157
+        width: 6
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 620ce987ead907890800000000000000
+      internalID: -7462291209879371738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 175
+        width: 26
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d9ee806eb94e4c90800000000000000
+      internalID: -7183723273596769839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_3
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 123
+        width: 69
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 143801180e91713e0800000000000000
+      internalID: -2083167850606853311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_4
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 114
+        width: 99
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e61d44ec5b6e229b0800000000000000
+      internalID: -5106265358960635538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_5
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 123
+        width: 71
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb7635274e1207af0800000000000000
+      internalID: -400783101781645380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_6
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 157
+        width: 6
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cd1ee3205e5a5800800000000000000
+      internalID: 601897198500584900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_7
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 175
+        width: 26
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5de0340669b1bed60800000000000000
+      internalID: 7920454702335200981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_8
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 123
+        width: 69
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d7630a906f4bba70800000000000000
+      internalID: 8843749569591470037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_9
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 114
+        width: 99
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7308154a5b41cccb0800000000000000
+      internalID: -4842472728951685065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_10
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 123
+        width: 71
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca825b6ced6ec0ae0800000000000000
+      internalID: -1581635524622997332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_11
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 157
+        width: 6
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e4f0318a7c96f740800000000000000
+      internalID: 5185504070931117289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_12
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 175
+        width: 26
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 857d722d327025510800000000000000
+      internalID: 1536298273317836632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_13
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 123
+        width: 69
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af4798bc0fa3a9860800000000000000
+      internalID: 7537401732239291642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_14
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 114
+        width: 99
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21101785824ae28f0800000000000000
+      internalID: -563332410185285358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_15
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 123
+        width: 71
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb4e162f67e716c60800000000000000
+      internalID: 7809662278174893244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_16
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 157
+        width: 6
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6696cbfefc30ce00800000000000000
+      internalID: 1062916577902892650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_17
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 175
+        width: 26
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f3481fdfd60c0680800000000000000
+      internalID: -8787641214316297231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_18
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 123
+        width: 69
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43c254fa55eafe910800000000000000
+      internalID: 1868904053418044468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_19
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 114
+        width: 99
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfd092f12d0442d10800000000000000
+      internalID: 2099874597471587837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_20
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 123
+        width: 71
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 716101764b0685760800000000000000
+      internalID: 7446808311796602391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_21
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 157
+        width: 6
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3785814bbe6240a0800000000000000
+      internalID: -6898829928640968897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_22
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 175
+        width: 26
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceae3da7e47798fe0800000000000000
+      internalID: -1186285847883552020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_23
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 123
+        width: 69
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7fa088617049aed0800000000000000
+      internalID: -2402318070396702850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_24
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 114
+        width: 99
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cce5727df078da770800000000000000
+      internalID: 8623697363588308684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_25
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 123
+        width: 71
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aba8b39866b7a5700800000000000000
+      internalID: 529871586488715962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_26
+      rect:
+        serializedVersion: 2
+        x: 1642
+        y: 157
+        width: 6
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0c5e2a20e1080340800000000000000
+      internalID: 4830112662646840333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_27
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 175
+        width: 26
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68b530e9a204b8c20800000000000000
+      internalID: 3209729711215434630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_28
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 123
+        width: 69
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a65279359ff9e6d40800000000000000
+      internalID: 5579572881556710762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_29
+      rect:
+        serializedVersion: 2
+        x: 1767
+        y: 114
+        width: 99
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cbb7ce671cc217c0800000000000000
+      internalID: -4101991909566202936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_30
+      rect:
+        serializedVersion: 2
+        x: 1885
+        y: 123
+        width: 71
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04da30ec5253db300800000000000000
+      internalID: 269429989198507328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_31
+      rect:
+        serializedVersion: 2
+        x: 1962
+        y: 157
+        width: 6
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3327a1588a306aa0800000000000000
+      internalID: -6169867132337708229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_32
+      rect:
+        serializedVersion: 2
+        x: 1968
+        y: 175
+        width: 26
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a20c302bc8e834530800000000000000
+      internalID: 3838068042382950442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_33
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 123
+        width: 69
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb8d15c6eb8271bd0800000000000000
+      internalID: -2659612256612788036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_34
+      rect:
+        serializedVersion: 2
+        x: 2087
+        y: 114
+        width: 99
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57d2afac91c6c6c00800000000000000
+      internalID: 895209283975261557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_35
+      rect:
+        serializedVersion: 2
+        x: 2205
+        y: 123
+        width: 71
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff814d6dda1c1c370800000000000000
+      internalID: 8341160937244596479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_36
+      rect:
+        serializedVersion: 2
+        x: 2282
+        y: 157
+        width: 6
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 282d2d453d4113da0800000000000000
+      internalID: -5966965133395438974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_37
+      rect:
+        serializedVersion: 2
+        x: 2288
+        y: 175
+        width: 26
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19b904df062fcfa20800000000000000
+      internalID: 3097617142103710609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_38
+      rect:
+        serializedVersion: 2
+        x: 2320
+        y: 123
+        width: 69
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7be790a6485588b40800000000000000
+      internalID: 5442694176880295607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_39
+      rect:
+        serializedVersion: 2
+        x: 2407
+        y: 114
+        width: 99
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e14851b26b79e280800000000000000
+      internalID: -9013537515392974366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_40
+      rect:
+        serializedVersion: 2
+        x: 2525
+        y: 171
+        width: 35
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13e246ed68fb08e90800000000000000
+      internalID: -7025404832720343503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_41
+      rect:
+        serializedVersion: 2
+        x: 2555
+        y: 123
+        width: 5
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 018c38d5580636240800000000000000
+      internalID: 4783773355113433104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 57
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33fc6b89be0ffca90800000000000000
+      internalID: -7291344377019445453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_43
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 0
+        width: 21
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 001277bcc7f6f7ed0800000000000000
+      internalID: -2414088293467086592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_44
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 0
+        width: 120
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ef62951f4b842cb0800000000000000
+      internalID: -4889630123636920345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_45
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 0
+        width: 28
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff8ebf545a9250910800000000000000
+      internalID: 1802893015652231423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_46
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 0
+        width: 95
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd983ec015fb37e10800000000000000
+      internalID: 2194307798289058269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_47
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 0
+        width: 21
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a83d25aa1b2bc2e0800000000000000
+      internalID: -2104541007425226590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_48
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 0
+        width: 120
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3fd50b0278f29020800000000000000
+      internalID: 2347211524508344122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_49
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 0
+        width: 28
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04071bf1d49031630800000000000000
+      internalID: 3896468329454465088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_50
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 0
+        width: 95
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f5fedde6e34ff6c0800000000000000
+      internalID: -4107489676026251791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_51
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 0
+        width: 21
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2f8a3146fe752940800000000000000
+      internalID: 5270758535028444974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_52
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 0
+        width: 120
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21beb7f463fad7cb0800000000000000
+      internalID: -4864539374693651694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_53
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 0
+        width: 28
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90f9d0699920e3400800000000000000
+      internalID: 305684683378499337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_54
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 0
+        width: 95
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07cc16fced33f10c0800000000000000
+      internalID: -4602903262094308240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_55
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 0
+        width: 21
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c017373424059e1c0800000000000000
+      internalID: -4473956509286174452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_56
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 0
+        width: 120
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a3987f29d92ad830800000000000000
+      internalID: 4096632823827960745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_57
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 0
+        width: 28
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7f4e678a529090a0800000000000000
+      internalID: -6876835713477881986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_58
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 0
+        width: 95
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cca1c9ee18d3bcfa0800000000000000
+      internalID: -5779458068536616244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_59
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 0
+        width: 21
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b30562f12e69eaad0800000000000000
+      internalID: -2689046029564227525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_60
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 0
+        width: 120
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d04e44cdefaa46650800000000000000
+      internalID: 6225288596526785549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_61
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 0
+        width: 28
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 716adb76ba06492a0800000000000000
+      internalID: -6731649253715892713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_62
+      rect:
+        serializedVersion: 2
+        x: 1562
+        y: 0
+        width: 95
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 529ea62476bde5a70800000000000000
+      internalID: 8817726356980427045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_63
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 0
+        width: 21
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfa5d92f4c9b8b530800000000000000
+      internalID: 3871048135260068603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_64
+      rect:
+        serializedVersion: 2
+        x: 1709
+        y: 0
+        width: 120
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 319e91f770c780080800000000000000
+      internalID: -9220983865402070765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_65
+      rect:
+        serializedVersion: 2
+        x: 1847
+        y: 0
+        width: 28
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55dddddca420bcfe0800000000000000
+      internalID: -1167837158067806891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_66
+      rect:
+        serializedVersion: 2
+        x: 1882
+        y: 0
+        width: 95
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b92443487ef54d240800000000000000
+      internalID: 4815579349526004379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_67
+      rect:
+        serializedVersion: 2
+        x: 1985
+        y: 0
+        width: 21
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3808466b32caeec0800000000000000
+      internalID: -3536800996971247555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_68
+      rect:
+        serializedVersion: 2
+        x: 2029
+        y: 0
+        width: 120
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 894274487cf2a1670800000000000000
+      internalID: 8510166979834225816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_69
+      rect:
+        serializedVersion: 2
+        x: 2167
+        y: 0
+        width: 28
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3962e12915c9e6240800000000000000
+      internalID: 4786935328099149459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_70
+      rect:
+        serializedVersion: 2
+        x: 2202
+        y: 0
+        width: 95
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79b93dc6ef66f0f60800000000000000
+      internalID: 8002728305794194327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_71
+      rect:
+        serializedVersion: 2
+        x: 2305
+        y: 0
+        width: 21
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5665fa6e3e6441b0800000000000000
+      internalID: -5673288416218487204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_72
+      rect:
+        serializedVersion: 2
+        x: 2349
+        y: 0
+        width: 120
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf0934c9a91ca0560800000000000000
+      internalID: 7280844617388626172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_73
+      rect:
+        serializedVersion: 2
+        x: 2487
+        y: 0
+        width: 28
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b9945d59dcc745a0800000000000000
+      internalID: -6537031100159190607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3_Cercano_74
+      rect:
+        serializedVersion: 2
+        x: 2522
+        y: 0
+        width: 38
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1872e6b2b974a2990800000000000000
+      internalID: -7410031505110587519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      3_Cercano_0: 4808197555112262809
+      3_Cercano_1: -7462291209879371738
+      3_Cercano_10: -1581635524622997332
+      3_Cercano_11: 5185504070931117289
+      3_Cercano_12: 1536298273317836632
+      3_Cercano_13: 7537401732239291642
+      3_Cercano_14: -563332410185285358
+      3_Cercano_15: 7809662278174893244
+      3_Cercano_16: 1062916577902892650
+      3_Cercano_17: -8787641214316297231
+      3_Cercano_18: 1868904053418044468
+      3_Cercano_19: 2099874597471587837
+      3_Cercano_2: -7183723273596769839
+      3_Cercano_20: 7446808311796602391
+      3_Cercano_21: -6898829928640968897
+      3_Cercano_22: -1186285847883552020
+      3_Cercano_23: -2402318070396702850
+      3_Cercano_24: 8623697363588308684
+      3_Cercano_25: 529871586488715962
+      3_Cercano_26: 4830112662646840333
+      3_Cercano_27: 3209729711215434630
+      3_Cercano_28: 5579572881556710762
+      3_Cercano_29: -4101991909566202936
+      3_Cercano_3: -2083167850606853311
+      3_Cercano_30: 269429989198507328
+      3_Cercano_31: -6169867132337708229
+      3_Cercano_32: 3838068042382950442
+      3_Cercano_33: -2659612256612788036
+      3_Cercano_34: 895209283975261557
+      3_Cercano_35: 8341160937244596479
+      3_Cercano_36: -5966965133395438974
+      3_Cercano_37: 3097617142103710609
+      3_Cercano_38: 5442694176880295607
+      3_Cercano_39: -9013537515392974366
+      3_Cercano_4: -5106265358960635538
+      3_Cercano_40: -7025404832720343503
+      3_Cercano_41: 4783773355113433104
+      3_Cercano_42: -7291344377019445453
+      3_Cercano_43: -2414088293467086592
+      3_Cercano_44: -4889630123636920345
+      3_Cercano_45: 1802893015652231423
+      3_Cercano_46: 2194307798289058269
+      3_Cercano_47: -2104541007425226590
+      3_Cercano_48: 2347211524508344122
+      3_Cercano_49: 3896468329454465088
+      3_Cercano_5: -400783101781645380
+      3_Cercano_50: -4107489676026251791
+      3_Cercano_51: 5270758535028444974
+      3_Cercano_52: -4864539374693651694
+      3_Cercano_53: 305684683378499337
+      3_Cercano_54: -4602903262094308240
+      3_Cercano_55: -4473956509286174452
+      3_Cercano_56: 4096632823827960745
+      3_Cercano_57: -6876835713477881986
+      3_Cercano_58: -5779458068536616244
+      3_Cercano_59: -2689046029564227525
+      3_Cercano_6: 601897198500584900
+      3_Cercano_60: 6225288596526785549
+      3_Cercano_61: -6731649253715892713
+      3_Cercano_62: 8817726356980427045
+      3_Cercano_63: 3871048135260068603
+      3_Cercano_64: -9220983865402070765
+      3_Cercano_65: -1167837158067806891
+      3_Cercano_66: 4815579349526004379
+      3_Cercano_67: -3536800996971247555
+      3_Cercano_68: 8510166979834225816
+      3_Cercano_69: 4786935328099149459
+      3_Cercano_7: 7920454702335200981
+      3_Cercano_70: 8002728305794194327
+      3_Cercano_71: -5673288416218487204
+      3_Cercano_72: 7280844617388626172
+      3_Cercano_73: -6537031100159190607
+      3_Cercano_74: -7410031505110587519
+      3_Cercano_8: 8843749569591470037
+      3_Cercano_9: -4842472728951685065
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

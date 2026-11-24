@@ -1,0 +1,373 @@
+fileFormatVersion: 2
+guid: 5ec0e71b7aa24cdaa8c0c611d2587816
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -821056979083805325
+    second: N3_Conducto_Energia_0
+  - first:
+      213: 4444586691639917654
+    second: N3_Conducto_Energia_1
+  - first:
+      213: 3168736927546382497
+    second: N3_Conducto_Energia_2
+  - first:
+      213: 4701827786472467907
+    second: N3_Conducto_Energia_3
+  - first:
+      213: -3274665750215203281
+    second: N3_Conducto_Energia_4
+  - first:
+      213: 7511736310446861781
+    second: N3_Conducto_Energia_5
+  - first:
+      213: 6971972006299331668
+    second: N3_Conducto_Energia_6
+  - first:
+      213: 770591591634561948
+    second: N3_Conducto_Energia_7
+  - first:
+      213: 1383314678054833693
+    second: N3_Conducto_Energia_8
+  - first:
+      213: 559774573907298314
+    second: N3_Conducto_Energia_9
+  - first:
+      213: 8906820167005950788
+    second: N3_Conducto_Energia_10
+  - first:
+      213: -153752739223867146
+    second: N3_Conducto_Energia_11
+  - first:
+      213: 3991127714546250281
+    second: N3_Conducto_Energia_12
+  - first:
+      213: 7444788425580647910
+    second: N3_Conducto_Energia_13
+  - first:
+      213: -4087368391218483228
+    second: N3_Conducto_Energia_14
+  - first:
+      213: -234167442020151453
+    second: N3_Conducto_Energia_15
+  - first:
+      213: 8044251134815803166
+    second: N3_Conducto_Energia_16
+  - first:
+      213: 3974744240597605644
+    second: N3_Conducto_Energia_17
+  - first:
+      213: 8533441809457648089
+    second: N3_Conducto_Energia_18
+  - first:
+      213: 6137371814488145794
+    second: N3_Conducto_Energia_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: N3_Conducto_Energia_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37dba5517050b94f0800000000000000
+      internalID: -821056979083805325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N3_Conducto_Energia_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65c30a03c085ead30800000000000000
+      internalID: 4444586691639917654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N3_Conducto_Energia_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a89019627d99fb20800000000000000
+      internalID: 3168736927546382497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N3_Conducto_Energia_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cda0cfd57f304140800000000000000
+      internalID: 4701827786472467907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N3_Conducto_Energia_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f26e840a9dc0e82d0800000000000000
+      internalID: -3274665750215203281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N3_Conducto_Energia_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dda69e106c0f3860800000000000000
+      internalID: 7511736310446861781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N3_Conducto_Energia_6
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45c6073c99b61c060800000000000000
+      internalID: 6971972006299331668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N3_Conducto_Energia_7
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9be74648f0b1ba00800000000000000
+      internalID: 770591591634561948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8b4d7f2aa360c937a8c2906458b70f67
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      N3_Conducto_Energia_0: -821056979083805325
+      N3_Conducto_Energia_1: 4444586691639917654
+      N3_Conducto_Energia_10: 8906820167005950788
+      N3_Conducto_Energia_11: -153752739223867146
+      N3_Conducto_Energia_12: 3991127714546250281
+      N3_Conducto_Energia_13: 7444788425580647910
+      N3_Conducto_Energia_14: -4087368391218483228
+      N3_Conducto_Energia_15: -234167442020151453
+      N3_Conducto_Energia_16: 8044251134815803166
+      N3_Conducto_Energia_17: 3974744240597605644
+      N3_Conducto_Energia_18: 8533441809457648089
+      N3_Conducto_Energia_19: 6137371814488145794
+      N3_Conducto_Energia_2: 3168736927546382497
+      N3_Conducto_Energia_3: 4701827786472467907
+      N3_Conducto_Energia_4: -3274665750215203281
+      N3_Conducto_Energia_5: 7511736310446861781
+      N3_Conducto_Energia_6: 6971972006299331668
+      N3_Conducto_Energia_7: 770591591634561948
+      N3_Conducto_Energia_8: 1383314678054833693
+      N3_Conducto_Energia_9: 559774573907298314
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

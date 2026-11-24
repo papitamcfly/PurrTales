@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: 164c02309d28ae140b579ae7ae6da413
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3021929677700309892
+    second: 4_Fortaleza_0
+  - first:
+      213: 7021826166627442540
+    second: 4_Fortaleza_1
+  - first:
+      213: 1460342934885737578
+    second: 4_Fortaleza_2
+  - first:
+      213: -4802625629875588898
+    second: 4_Fortaleza_3
+  - first:
+      213: 8078551024337236484
+    second: 4_Fortaleza_4
+  - first:
+      213: 3716391239987098482
+    second: 4_Fortaleza_5
+  - first:
+      213: -235868393571173663
+    second: 4_Fortaleza_6
+  - first:
+      213: 7803429868868414229
+    second: 4_Fortaleza_7
+  - first:
+      213: -3883380071344660115
+    second: 4_Fortaleza_8
+  - first:
+      213: -8878693931909038992
+    second: 4_Fortaleza_9
+  - first:
+      213: -3767291041265280673
+    second: 4_Fortaleza_10
+  - first:
+      213: -5175221155069881058
+    second: 4_Fortaleza_11
+  - first:
+      213: -6584571142183908912
+    second: 4_Fortaleza_12
+  - first:
+      213: 3754912805962050780
+    second: 4_Fortaleza_13
+  - first:
+      213: -6014982390301020628
+    second: 4_Fortaleza_14
+  - first:
+      213: -137646779334703001
+    second: 4_Fortaleza_15
+  - first:
+      213: 5399497992091801654
+    second: 4_Fortaleza_16
+  - first:
+      213: -6781544177751941571
+    second: 4_Fortaleza_17
+  - first:
+      213: 3889702039373429869
+    second: 4_Fortaleza_18
+  - first:
+      213: -5254089467699400675
+    second: 4_Fortaleza_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 4_Fortaleza_0
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 100
+        width: 66
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 483a98fe70d00f920800000000000000
+      internalID: 3021929677700309892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Fortaleza_1
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 100
+        width: 66
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6f1f5002b9827160800000000000000
+      internalID: 7021826166627442540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Fortaleza_2
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 100
+        width: 66
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a64ad1c792e244410800000000000000
+      internalID: 1460342934885737578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Fortaleza_3
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 100
+        width: 66
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed0341e5f65a95db0800000000000000
+      internalID: -4802625629875588898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Fortaleza_4
+      rect:
+        serializedVersion: 2
+        x: 1509
+        y: 100
+        width: 66
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4023d79ca57cc1070800000000000000
+      internalID: 8078551024337236484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Fortaleza_5
+      rect:
+        serializedVersion: 2
+        x: 1829
+        y: 100
+        width: 66
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 273fdc97426439330800000000000000
+      internalID: 3716391239987098482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Fortaleza_6
+      rect:
+        serializedVersion: 2
+        x: 2149
+        y: 100
+        width: 66
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1eab27b12f60abcf0800000000000000
+      internalID: -235868393571173663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Fortaleza_7
+      rect:
+        serializedVersion: 2
+        x: 2469
+        y: 100
+        width: 66
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51b23931f1a5b4c60800000000000000
+      internalID: 7803429868868414229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Fortaleza_8
+      rect:
+        serializedVersion: 2
+        x: 2789
+        y: 100
+        width: 66
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d61abaf66667b1ac0800000000000000
+      internalID: -3883380071344660115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Fortaleza_9
+      rect:
+        serializedVersion: 2
+        x: 3109
+        y: 100
+        width: 66
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07c352709ea88c480800000000000000
+      internalID: -8878693931909038992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Fortaleza_10
+      rect:
+        serializedVersion: 2
+        x: 3429
+        y: 100
+        width: 66
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f591fd702c4e7bbc0800000000000000
+      internalID: -3767291041265280673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Fortaleza_11
+      rect:
+        serializedVersion: 2
+        x: 3749
+        y: 100
+        width: 66
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1519f967cbed28b0800000000000000
+      internalID: -5175221155069881058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Fortaleza_12
+      rect:
+        serializedVersion: 2
+        x: 4069
+        y: 100
+        width: 66
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d907d7ce67ee94a0800000000000000
+      internalID: -6584571142183908912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Fortaleza_13
+      rect:
+        serializedVersion: 2
+        x: 4389
+        y: 100
+        width: 66
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdceee97d412c1430800000000000000
+      internalID: 3754912805962050780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Fortaleza_14
+      rect:
+        serializedVersion: 2
+        x: 4709
+        y: 100
+        width: 66
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2ea0ef726d768ca0800000000000000
+      internalID: -6014982390301020628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Fortaleza_15
+      rect:
+        serializedVersion: 2
+        x: 5029
+        y: 100
+        width: 66
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7684745cbfaf61ef0800000000000000
+      internalID: -137646779334703001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Fortaleza_16
+      rect:
+        serializedVersion: 2
+        x: 5349
+        y: 100
+        width: 66
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6381118e0dedeea40800000000000000
+      internalID: 5399497992091801654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Fortaleza_17
+      rect:
+        serializedVersion: 2
+        x: 5669
+        y: 100
+        width: 66
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3e1a70208d13e1a0800000000000000
+      internalID: -6781544177751941571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Fortaleza_18
+      rect:
+        serializedVersion: 2
+        x: 5989
+        y: 100
+        width: 66
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6c37f2756ffaf530800000000000000
+      internalID: 3889702039373429869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_Fortaleza_19
+      rect:
+        serializedVersion: 2
+        x: 6309
+        y: 100
+        width: 66
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d10f7ab6779b517b0800000000000000
+      internalID: -5254089467699400675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      4_Fortaleza_0: 3021929677700309892
+      4_Fortaleza_1: 7021826166627442540
+      4_Fortaleza_10: -3767291041265280673
+      4_Fortaleza_11: -5175221155069881058
+      4_Fortaleza_12: -6584571142183908912
+      4_Fortaleza_13: 3754912805962050780
+      4_Fortaleza_14: -6014982390301020628
+      4_Fortaleza_15: -137646779334703001
+      4_Fortaleza_16: 5399497992091801654
+      4_Fortaleza_17: -6781544177751941571
+      4_Fortaleza_18: 3889702039373429869
+      4_Fortaleza_19: -5254089467699400675
+      4_Fortaleza_2: 1460342934885737578
+      4_Fortaleza_3: -4802625629875588898
+      4_Fortaleza_4: 8078551024337236484
+      4_Fortaleza_5: 3716391239987098482
+      4_Fortaleza_6: -235868393571173663
+      4_Fortaleza_7: 7803429868868414229
+      4_Fortaleza_8: -3883380071344660115
+      4_Fortaleza_9: -8878693931909038992
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

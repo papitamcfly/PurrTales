@@ -1,0 +1,1 @@
+return {w=320,h=180,n=1,out='/Users/escuela/Downloads/pj/Purr-tales/Nivel2_Torre/Fondos/N2_Fondo_Parallax.aseprite',layers={'1_Cielo','2_Nubes_Lejanas','3_Montanas_Castillos','4_Niebla_Cercana'},dur={120},tags={}}

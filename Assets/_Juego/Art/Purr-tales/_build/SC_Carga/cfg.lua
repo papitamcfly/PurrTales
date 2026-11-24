@@ -1,0 +1,1 @@
+return {w=320,h=180,n=12,out='/Users/escuela/Downloads/pj/Purr-tales/UI/Pantallas/UI_Pantalla_Carga.aseprite',layers={'Fondo','Portales','Huellas','Texto'},dur={120,120,120,120,120,120,120,120,120,120,120,120},tags={{'Cargando',1,12}}}

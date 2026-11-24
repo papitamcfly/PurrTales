@@ -1,0 +1,262 @@
+{
+ "resolucion": [
+  320,
+  180
+ ],
+ "nodos": {
+  "Inicio": {
+   "x": 40,
+   "y": 146,
+   "estado_inicial": "Inicio"
+  },
+  "Nivel1_Grutas": {
+   "x": 72,
+   "y": 88,
+   "estado_inicial": "Disponible"
+  },
+  "Nivel2_Torre": {
+   "x": 166,
+   "y": 114,
+   "estado_inicial": "Bloqueado"
+  },
+  "Nivel3_Fortaleza": {
+   "x": 276,
+   "y": 66,
+   "estado_inicial": "Bloqueado"
+  }
+ },
+ "caminos": [
+  {
+   "desde": "Inicio",
+   "hasta": "Nivel1_Grutas",
+   "waypoints": [
+    [
+     40,
+     146
+    ],
+    [
+     44,
+     128
+    ],
+    [
+     54,
+     110
+    ],
+    [
+     64,
+     98
+    ],
+    [
+     72,
+     88
+    ]
+   ],
+   "puntos": [
+    [
+     42,
+     138
+    ],
+    [
+     44,
+     130
+    ],
+    [
+     47,
+     123
+    ],
+    [
+     51,
+     115
+    ],
+    [
+     55,
+     108
+    ],
+    [
+     61,
+     102
+    ],
+    [
+     66,
+     96
+    ]
+   ],
+   "tipo": "tierra"
+  },
+  {
+   "desde": "Nivel1_Grutas",
+   "hasta": "Nivel2_Torre",
+   "waypoints": [
+    [
+     72,
+     88
+    ],
+    [
+     88,
+     100
+    ],
+    [
+     104,
+     112
+    ],
+    [
+     124,
+     120
+    ],
+    [
+     146,
+     118
+    ],
+    [
+     166,
+     114
+    ]
+   ],
+   "puntos": [
+    [
+     78,
+     93
+    ],
+    [
+     85,
+     98
+    ],
+    [
+     91,
+     102
+    ],
+    [
+     98,
+     107
+    ],
+    [
+     104,
+     112
+    ],
+    [
+     112,
+     115
+    ],
+    [
+     119,
+     118
+    ],
+    [
+     127,
+     120
+    ],
+    [
+     135,
+     119
+    ],
+    [
+     143,
+     118
+    ],
+    [
+     151,
+     117
+    ],
+    [
+     159,
+     115
+    ]
+   ],
+   "tipo": "tierra"
+  },
+  {
+   "desde": "Nivel2_Torre",
+   "hasta": "Nivel3_Fortaleza",
+   "waypoints": [
+    [
+     166,
+     114
+    ],
+    [
+     186,
+     106
+    ],
+    [
+     206,
+     98
+    ],
+    [
+     224,
+     90
+    ],
+    [
+     240,
+     84
+    ],
+    [
+     256,
+     76
+    ],
+    [
+     268,
+     72
+    ],
+    [
+     276,
+     66
+    ]
+   ],
+   "puntos": [
+    [
+     174,
+     111
+    ],
+    [
+     181,
+     108
+    ],
+    [
+     189,
+     105
+    ],
+    [
+     196,
+     102
+    ],
+    [
+     204,
+     99
+    ],
+    [
+     212,
+     95
+    ],
+    [
+     219,
+     92
+    ],
+    [
+     227,
+     89
+    ],
+    [
+     234,
+     86
+    ],
+    [
+     242,
+     83
+    ],
+    [
+     249,
+     79
+    ],
+    [
+     257,
+     76
+    ],
+    [
+     265,
+     73
+    ]
+   ],
+   "tipo": "puente_runico"
+  }
+ ],
+ "notas": "Coordenadas en pixeles del mapa (origen arriba-izquierda). El gato recorre los waypoints en orden; los puntos se muestran con UI_Mapa_Puntos_Camino (0=desbloqueado,1=bloqueado,2=destello al revelarse,3=runa del puente). Un camino se desbloquea al completar el nivel de origen."
+}

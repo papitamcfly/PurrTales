@@ -1,0 +1,741 @@
+fileFormatVersion: 2
+guid: 62daeb906f3f97800945aefe8cbbada7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6523158073972394824
+    second: Caminos_0
+  - first:
+      213: 2054743507124401068
+    second: Caminos_1
+  - first:
+      213: -4234829794554348772
+    second: Caminos_2
+  - first:
+      213: -1400414363757535394
+    second: Caminos_3
+  - first:
+      213: -4152536987523942734
+    second: Caminos_4
+  - first:
+      213: 5170636528375696245
+    second: Caminos_5
+  - first:
+      213: 2288643563122449875
+    second: Caminos_6
+  - first:
+      213: 2941131259762950240
+    second: Caminos_7
+  - first:
+      213: 608399338007057198
+    second: Caminos_8
+  - first:
+      213: -6730503651449125298
+    second: Caminos_9
+  - first:
+      213: -4616128272011429588
+    second: Caminos_10
+  - first:
+      213: 5205945250443372357
+    second: Caminos_11
+  - first:
+      213: 7909286283830924551
+    second: Caminos_12
+  - first:
+      213: -5880236247145943301
+    second: Caminos_13
+  - first:
+      213: -576747575907193443
+    second: Caminos_14
+  - first:
+      213: 1206891057720757520
+    second: Caminos_15
+  - first:
+      213: 6319112478458998991
+    second: Caminos_16
+  - first:
+      213: 2408880919506445695
+    second: Caminos_17
+  - first:
+      213: -8572645446447172546
+    second: Caminos_18
+  - first:
+      213: 449788594468488953
+    second: Caminos_19
+  - first:
+      213: -8828685082481364735
+    second: Caminos_20
+  - first:
+      213: 5849660046518057240
+    second: Caminos_21
+  - first:
+      213: -4254083952485834932
+    second: Caminos_22
+  - first:
+      213: -4771729398947980751
+    second: Caminos_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Caminos_0
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 98
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84b88d405b9e68a50800000000000000
+      internalID: 6523158073972394824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminos_1
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 100
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca3b0be455ae38c10800000000000000
+      internalID: 2054743507124401068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminos_2
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 102
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1bf85b2dbcda35c0800000000000000
+      internalID: -4234829794554348772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminos_3
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 98
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5f90ed4e8ab09ce0800000000000000
+      internalID: -1400414363757535394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminos_4
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 100
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b6f6f56c993f56c0800000000000000
+      internalID: -4152536987523942734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminos_5
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 102
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57b0e70078ac1c740800000000000000
+      internalID: 5170636528375696245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminos_6
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 98
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ddd565e135e2cf10800000000000000
+      internalID: 2288643563122449875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminos_7
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 100
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 060c7f74c4ff0d820800000000000000
+      internalID: 2941131259762950240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminos_8
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 102
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e235e7779f7717800800000000000000
+      internalID: 608399338007057198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminos_9
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 98
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e46c7e7b6927892a0800000000000000
+      internalID: -6730503651449125298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminos_10
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 100
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c29fe1d3bc730ffb0800000000000000
+      internalID: -4616128272011429588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminos_11
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 102
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5472fcc7f9b3f3840800000000000000
+      internalID: 5205945250443372357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminos_12
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 30
+        width: 201
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7059c9e48fd63cd60800000000000000
+      internalID: 7909286283830924551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminos_13
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 92
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfe6d7db944356ea0800000000000000
+      internalID: -5880236247145943301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminos_14
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 95
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9debfca22bfef7f0800000000000000
+      internalID: -576747575907193443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminos_15
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 30
+        width: 201
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01d8a0ac50dbfb010800000000000000
+      internalID: 1206891057720757520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminos_16
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 92
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc0794ea15ff1b750800000000000000
+      internalID: 6319112478458998991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminos_17
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 95
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f75e569fe601e6120800000000000000
+      internalID: 2408880919506445695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminos_18
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 30
+        width: 201
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e347523e268d70980800000000000000
+      internalID: -8572645446447172546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminos_19
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 92
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f60155f758fd3600800000000000000
+      internalID: 449788594468488953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminos_20
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 95
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10178e0a1b53a7580800000000000000
+      internalID: -8828685082481364735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminos_21
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 30
+        width: 201
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 819f089c1da2e2150800000000000000
+      internalID: 5849660046518057240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminos_22
+      rect:
+        serializedVersion: 2
+        x: 1198
+        y: 92
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4f546f2f2576f4c0800000000000000
+      internalID: -4254083952485834932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminos_23
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 95
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13ada63b46967cdb0800000000000000
+      internalID: -4771729398947980751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Caminos_0: 6523158073972394824
+      Caminos_1: 2054743507124401068
+      Caminos_10: -4616128272011429588
+      Caminos_11: 5205945250443372357
+      Caminos_12: 7909286283830924551
+      Caminos_13: -5880236247145943301
+      Caminos_14: -576747575907193443
+      Caminos_15: 1206891057720757520
+      Caminos_16: 6319112478458998991
+      Caminos_17: 2408880919506445695
+      Caminos_18: -8572645446447172546
+      Caminos_19: 449788594468488953
+      Caminos_2: -4234829794554348772
+      Caminos_20: -8828685082481364735
+      Caminos_21: 5849660046518057240
+      Caminos_22: -4254083952485834932
+      Caminos_23: -4771729398947980751
+      Caminos_3: -1400414363757535394
+      Caminos_4: -4152536987523942734
+      Caminos_5: 5170636528375696245
+      Caminos_6: 2288643563122449875
+      Caminos_7: 2941131259762950240
+      Caminos_8: 608399338007057198
+      Caminos_9: -6730503651449125298
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

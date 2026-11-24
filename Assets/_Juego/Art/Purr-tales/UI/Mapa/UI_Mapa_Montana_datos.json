@@ -1,0 +1,247 @@
+{
+ "resolucion": [
+  320,
+  180
+ ],
+ "nodos": {
+  "Inicio": {
+   "x": 160,
+   "y": 149,
+   "estado_inicial": "Inicio"
+  },
+  "Nivel1_Grutas": {
+   "x": 120,
+   "y": 124,
+   "estado_inicial": "Disponible"
+  },
+  "Nivel2_Torre": {
+   "x": 184,
+   "y": 101,
+   "estado_inicial": "Bloqueado"
+  },
+  "Nivel3_Fortaleza": {
+   "x": 160,
+   "y": 48,
+   "estado_inicial": "Bloqueado"
+  }
+ },
+ "caminos": [
+  {
+   "desde": "Inicio",
+   "hasta": "Nivel1_Grutas",
+   "waypoints": [
+    [
+     160,
+     149
+    ],
+    [
+     152,
+     145
+    ],
+    [
+     144,
+     141
+    ],
+    [
+     136,
+     137
+    ],
+    [
+     128,
+     128
+    ],
+    [
+     120,
+     124
+    ]
+   ],
+   "puntos": [
+    [
+     156,
+     147
+    ],
+    [
+     152,
+     145
+    ],
+    [
+     148,
+     143
+    ],
+    [
+     144,
+     141
+    ],
+    [
+     140,
+     139
+    ],
+    [
+     136,
+     137
+    ],
+    [
+     132,
+     132
+    ],
+    [
+     128,
+     128
+    ],
+    [
+     124,
+     126
+    ]
+   ]
+  },
+  {
+   "desde": "Nivel1_Grutas",
+   "hasta": "Nivel2_Torre",
+   "waypoints": [
+    [
+     120,
+     124
+    ],
+    [
+     128,
+     110
+    ],
+    [
+     136,
+     106
+    ],
+    [
+     144,
+     110
+    ],
+    [
+     160,
+     110
+    ],
+    [
+     176,
+     110
+    ],
+    [
+     184,
+     101
+    ]
+   ],
+   "puntos": [
+    [
+     124,
+     117
+    ],
+    [
+     128,
+     110
+    ],
+    [
+     132,
+     108
+    ],
+    [
+     136,
+     106
+    ],
+    [
+     140,
+     108
+    ],
+    [
+     144,
+     110
+    ],
+    [
+     152,
+     110
+    ],
+    [
+     160,
+     110
+    ],
+    [
+     168,
+     110
+    ],
+    [
+     176,
+     110
+    ],
+    [
+     180,
+     105
+    ]
+   ]
+  },
+  {
+   "desde": "Nivel2_Torre",
+   "hasta": "Nivel3_Fortaleza",
+   "waypoints": [
+    [
+     184,
+     101
+    ],
+    [
+     176,
+     97
+    ],
+    [
+     168,
+     88
+    ],
+    [
+     168,
+     70
+    ],
+    [
+     160,
+     56
+    ],
+    [
+     160,
+     48
+    ]
+   ],
+   "puntos": [
+    [
+     180,
+     99
+    ],
+    [
+     176,
+     97
+    ],
+    [
+     172,
+     92
+    ],
+    [
+     168,
+     88
+    ],
+    [
+     168,
+     79
+    ],
+    [
+     168,
+     70
+    ],
+    [
+     164,
+     63
+    ],
+    [
+     160,
+     56
+    ],
+    [
+     160,
+     52
+    ]
+   ]
+  }
+ ],
+ "notas": "Vista isometrica. Coordenadas en pixeles del mapa (origen arriba-izquierda), centro de la cara superior de cada casilla del camino. El gato recorre los waypoints en orden; al subir de terraza conviene usar la animacion Arriba."
+}
