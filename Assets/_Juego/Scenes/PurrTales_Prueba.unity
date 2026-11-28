@@ -3317,6 +3317,7 @@ MonoBehaviour:
   input: {fileID: 1221900463}
   spriteRenderer: {fileID: 1795097496}
   trail: {fileID: 1221900464}
+  deathPoofPrefab: {fileID: 3530759930220646226, guid: 17202edec9220deaba6165309502c0d8, type: 3}
   hazardMask:
     serializedVersion: 2
     m_Bits: 2048
@@ -3356,6 +3357,7 @@ MonoBehaviour:
   wavedashTrailDuration: 0.2
   normalTint: {r: 1, g: 1, b: 1, a: 1}
   noChargeTint: {r: 0.55, g: 0.75, b: 1, a: 1}
+  dashRechargeVfxPrefab: {fileID: 5678114555234560394, guid: 8f8cdef8a46a4d3309f74f0ee6334278, type: 3}
 --- !u!114 &1221900462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5022,7 +5024,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d2834d680db81194e9ca8a8ca2742126, type: 2}
+  - {fileID: 2100000, guid: 0552f4132db858bcb94615b07a9e941c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -1,0 +1,215 @@
+{
+ "tile_px": 16,
+ "hoja": "4x4 por frame, 4 frames horizontales (64x64 c/u), 150 ms",
+ "uso": "Superficie universal donde se pueden abrir portales en los 3 niveles. Ponla en su propio Tilemap/Layer con tag o layer 'PortalSurface' para que el raycast del portal solo la acepte.",
+ "tiles": [
+  {
+   "index": 0,
+   "col": 0,
+   "row": 0,
+   "nombre": "Esquina_SupIzq",
+   "lados_expuestos": {
+    "N": 1,
+    "E": 0,
+    "S": 0,
+    "O": 1
+   },
+   "runa": false
+  },
+  {
+   "index": 1,
+   "col": 1,
+   "row": 0,
+   "nombre": "Borde_Sup",
+   "lados_expuestos": {
+    "N": 1,
+    "E": 0,
+    "S": 0,
+    "O": 0
+   },
+   "runa": false
+  },
+  {
+   "index": 2,
+   "col": 2,
+   "row": 0,
+   "nombre": "Esquina_SupDer",
+   "lados_expuestos": {
+    "N": 1,
+    "E": 1,
+    "S": 0,
+    "O": 0
+   },
+   "runa": false
+  },
+  {
+   "index": 3,
+   "col": 3,
+   "row": 0,
+   "nombre": "Bloque_Suelto",
+   "lados_expuestos": {
+    "N": 1,
+    "E": 1,
+    "S": 1,
+    "O": 1
+   },
+   "runa": true
+  },
+  {
+   "index": 4,
+   "col": 0,
+   "row": 1,
+   "nombre": "Borde_Izq",
+   "lados_expuestos": {
+    "N": 0,
+    "E": 0,
+    "S": 0,
+    "O": 1
+   },
+   "runa": false
+  },
+  {
+   "index": 5,
+   "col": 1,
+   "row": 1,
+   "nombre": "Centro",
+   "lados_expuestos": {
+    "N": 0,
+    "E": 0,
+    "S": 0,
+    "O": 0
+   },
+   "runa": true
+  },
+  {
+   "index": 6,
+   "col": 2,
+   "row": 1,
+   "nombre": "Borde_Der",
+   "lados_expuestos": {
+    "N": 0,
+    "E": 1,
+    "S": 0,
+    "O": 0
+   },
+   "runa": false
+  },
+  {
+   "index": 7,
+   "col": 3,
+   "row": 1,
+   "nombre": "Columna_Arriba",
+   "lados_expuestos": {
+    "N": 1,
+    "E": 1,
+    "S": 0,
+    "O": 1
+   },
+   "runa": false
+  },
+  {
+   "index": 8,
+   "col": 0,
+   "row": 2,
+   "nombre": "Esquina_InfIzq",
+   "lados_expuestos": {
+    "N": 0,
+    "E": 0,
+    "S": 1,
+    "O": 1
+   },
+   "runa": false
+  },
+  {
+   "index": 9,
+   "col": 1,
+   "row": 2,
+   "nombre": "Borde_Inf",
+   "lados_expuestos": {
+    "N": 0,
+    "E": 0,
+    "S": 1,
+    "O": 0
+   },
+   "runa": false
+  },
+  {
+   "index": 10,
+   "col": 2,
+   "row": 2,
+   "nombre": "Esquina_InfDer",
+   "lados_expuestos": {
+    "N": 0,
+    "E": 1,
+    "S": 1,
+    "O": 0
+   },
+   "runa": false
+  },
+  {
+   "index": 11,
+   "col": 3,
+   "row": 2,
+   "nombre": "Columna_Centro",
+   "lados_expuestos": {
+    "N": 0,
+    "E": 1,
+    "S": 0,
+    "O": 1
+   },
+   "runa": true
+  },
+  {
+   "index": 12,
+   "col": 0,
+   "row": 3,
+   "nombre": "Plataforma_Izq",
+   "lados_expuestos": {
+    "N": 1,
+    "E": 0,
+    "S": 1,
+    "O": 1
+   },
+   "runa": false
+  },
+  {
+   "index": 13,
+   "col": 1,
+   "row": 3,
+   "nombre": "Plataforma_Centro",
+   "lados_expuestos": {
+    "N": 1,
+    "E": 0,
+    "S": 1,
+    "O": 0
+   },
+   "runa": true
+  },
+  {
+   "index": 14,
+   "col": 2,
+   "row": 3,
+   "nombre": "Plataforma_Der",
+   "lados_expuestos": {
+    "N": 1,
+    "E": 1,
+    "S": 1,
+    "O": 0
+   },
+   "runa": false
+  },
+  {
+   "index": 15,
+   "col": 3,
+   "row": 3,
+   "nombre": "Columna_Abajo",
+   "lados_expuestos": {
+    "N": 0,
+    "E": 1,
+    "S": 1,
+    "O": 1
+   },
+   "runa": false
+  }
+ ]
+}

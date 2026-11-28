@@ -54,6 +54,8 @@ namespace PurrTales
         [Header("Feedback")]
         public Color normalTint = Color.white;
         public Color noChargeTint = new Color(0.55f, 0.75f, 1f, 1f);
+        [Tooltip("Prefab del efecto Dash_Recharge instanciado sobre el gato al recuperar el dash tras haber estado gastado.")]
+        public GameObject dashRechargeVfxPrefab;
 
         public bool IsDashing { get; private set; }
         public Vector2 DashDirection { get; private set; }
@@ -97,6 +99,9 @@ namespace PurrTales
         bool requireAirBeforeRecharge;
         bool preservedMomentum;
         Coroutine trailStopCoroutine;
+
+        static readonly int DashReadyPropId = Shader.PropertyToID("_DashListo");
+        MaterialPropertyBlock propBlock;
 
         void Reset()
         {
@@ -463,11 +468,30 @@ namespace PurrTales
             rb.linearVelocity = DashDirection * CurrentDashSpeed;
         }
 
-        /// <summary>Restaura las cargas de dash (suelo, portal, respawn).</summary>
+        /// <summary>Restaura las cargas de dash (suelo, portal, wavedash) y reproduce el VFX de recarga si estaba gastado.</summary>
         public void RechargeDash()
         {
+            RechargeDash(true);
+        }
+
+        /// <summary>Restaura las cargas de dash, reproduciendo opcionalmente el VFX de recarga si estaba gastado.</summary>
+        public void RechargeDash(bool playVfx)
+        {
+            bool wasDepleted = Charges <= 0;
             Charges = maxCharges;
             RefreshTint();
+
+            if (playVfx && wasDepleted && dashRechargeVfxPrefab != null)
+            {
+                Transform anchor = spriteRenderer != null ? spriteRenderer.transform : transform;
+                GameObject vfx = Instantiate(dashRechargeVfxPrefab, anchor.position, Quaternion.identity);
+                AutoDestroyVFX autoDestroy = vfx.GetComponent<AutoDestroyVFX>();
+                if (autoDestroy != null)
+                {
+                    autoDestroy.followTarget = anchor;
+                    autoDestroy.followOffset = Vector3.zero;
+                }
+            }
         }
 
         /// <summary>Cancela el dash inmediatamente (muerte / respawn).</summary>
@@ -498,7 +522,20 @@ namespace PurrTales
         void RefreshTint()
         {
             if (spriteRenderer == null) return;
-            spriteRenderer.color = Charges > 0 ? normalTint : noChargeTint;
+
+            Material sharedMat = spriteRenderer.sharedMaterial;
+            if (sharedMat != null && sharedMat.HasProperty(DashReadyPropId))
+            {
+                spriteRenderer.color = normalTint;
+                if (propBlock == null) propBlock = new MaterialPropertyBlock();
+                spriteRenderer.GetPropertyBlock(propBlock);
+                propBlock.SetFloat(DashReadyPropId, Charges > 0 ? 1f : 0f);
+                spriteRenderer.SetPropertyBlock(propBlock);
+            }
+            else
+            {
+                spriteRenderer.color = Charges > 0 ? normalTint : noChargeTint;
+            }
         }
     }
 }

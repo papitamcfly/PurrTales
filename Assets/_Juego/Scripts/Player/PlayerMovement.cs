@@ -91,6 +91,8 @@ namespace PurrTales
         static readonly int AnimSpeedHash = Animator.StringToHash("Speed");
         static readonly int AnimIsGroundedHash = Animator.StringToHash("IsGrounded");
         static readonly int AnimIsDashingHash = Animator.StringToHash("IsDashing");
+        static readonly int AnimVerticalVelocityHash = Animator.StringToHash("VerticalVelocity");
+        static readonly int AnimIsWallSlidingHash = Animator.StringToHash("IsWallSliding");
 
         public float JumpVelocity
         {
@@ -142,7 +144,19 @@ namespace PurrTales
                 if (Mathf.Abs(x) > inputDeadzone) FacingDirection = x > 0f ? 1 : -1;
             }
 
-            if (spriteRenderer != null) spriteRenderer.flipX = FacingDirection < 0;
+            if (spriteRenderer != null)
+            {
+                if (IsWallSliding && WallSide != 0)
+                {
+                    // Pared a la derecha (WallSide > 0): flipX = false (patas en columna 69 hacia la pared).
+                    // Pared a la izquierda (WallSide < 0): flipX = true.
+                    spriteRenderer.flipX = WallSide < 0;
+                }
+                else
+                {
+                    spriteRenderer.flipX = FacingDirection < 0;
+                }
+            }
             UpdateAnimator();
         }
 
@@ -150,10 +164,13 @@ namespace PurrTales
         {
             if (animator == null || animator.runtimeAnimatorController == null) return;
             float speed = rb != null ? Mathf.Abs(rb.linearVelocity.x) : 0f;
+            float verticalVelocity = rb != null ? rb.linearVelocity.y : 0f;
             bool dashing = dash != null && dash.IsDashing;
             animator.SetFloat(AnimSpeedHash, speed);
+            animator.SetFloat(AnimVerticalVelocityHash, verticalVelocity);
             animator.SetBool(AnimIsGroundedHash, IsGrounded);
             animator.SetBool(AnimIsDashingHash, dashing);
+            animator.SetBool(AnimIsWallSlidingHash, IsWallSliding);
         }
 
         void FixedUpdate()
@@ -440,11 +457,13 @@ namespace PurrTales
             pendingJumpCut = false;
             IsWallSliding = false;
             FacingDirection = 1;
+            if (spriteRenderer != null) spriteRenderer.flipX = false;
             if (rb != null)
             {
                 rb.linearVelocity = Vector2.zero;
                 rb.gravityScale = baseGravityScale;
             }
+            UpdateAnimator();
         }
 
         void OnDrawGizmosSelected()

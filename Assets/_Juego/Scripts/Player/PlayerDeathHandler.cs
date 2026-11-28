@@ -21,6 +21,10 @@ namespace PurrTales
         public SpriteRenderer spriteRenderer;
         public TrailRenderer trail;
 
+        [Header("VFX")]
+        [Tooltip("Prefab del efecto Death_Poof instanciado en la posición del gato al morir.")]
+        public GameObject deathPoofPrefab;
+
         [Header("Muerte")]
         public LayerMask hazardMask;
         [Tooltip("Si el jugador cae por debajo de esta altura, muere (vacío).")]
@@ -84,7 +88,7 @@ namespace PurrTales
             if (dash != null)
             {
                 dash.CancelDash();
-                dash.RechargeDash();
+                dash.RechargeDash(false);
             }
             if (rb != null)
             {
@@ -95,6 +99,7 @@ namespace PurrTales
             if (input != null) input.InputLocked = true;
             if (PortalManager.Instance != null) PortalManager.Instance.ClearAllPortals();
             if (spriteRenderer != null) spriteRenderer.enabled = false;
+            if (deathPoofPrefab != null) Instantiate(deathPoofPrefab, transform.position, Quaternion.identity);
 
             if (Died != null) Died();
 
@@ -121,7 +126,7 @@ namespace PurrTales
                 rb.simulated = true;
             }
             if (movement != null) movement.ResetState();
-            if (dash != null) dash.RechargeDash();
+            if (dash != null) dash.RechargeDash(false);
             if (trail != null) trail.Clear();
             if (spriteRenderer != null) spriteRenderer.enabled = true;
             if (input != null) input.InputLocked = false;

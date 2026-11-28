@@ -15,29 +15,56 @@ namespace PurrTales.EditorTools
     /// <summary>
     /// Configura e integra los recursos artísticos de Purr-tales ubicados en Assets/_Juego/Art/:
     ///  1. Configuración global Pixel Art (Sprite 2D/UI, Point, Sin compresión, PPU por categoría).
-    ///  2. Corte (Sprite Slicing) en modo Multiple para tilesets, enemigos, trampas, personajes, portales y gato.
-    ///  3. Generación de AnimationClips y AnimatorController del jugador (Idle, Walk, Run) y portales.
-    ///  4. Actualización de PortalAzul.prefab, PortalNaranja.prefab y Player en PurrTales_Prueba.unity.
-    ///  5. Creación de las Tile Palettes iniciales para Nivel 1 (Grutas).
+    ///  2. Corte (Sprite Slicing) en modo Multiple para tilesets, enemigos, trampas, personajes, portales, gato y VFX.
+    ///  3. Generación de AnimationClips y AnimatorController del jugador (Idle, Walk, Run, Jump, Fall, WallSlide, Dash),
+    ///     VFX (Death_Poof, Dash_Recharge) y portales.
+    ///  4. Material URP 2D de feedback de dash (Gato_DashColor.mat) y prefabs de VFX.
+    ///  5. Actualización de PortalAzul.prefab, PortalNaranja.prefab y Player en PurrTales_Prueba.unity.
+    ///  6. Creación de Tile Palettes para Nivel 1 (Grutas) y Superficie Universal de Portales (layer PortalSurface).
     /// </summary>
     public static class PurrTalesArtSetup
     {
         const string ArtRoot = "Assets/_Juego/Art";
+        const string NewGameplayDir = ArtRoot + "/Nuevos_Gameplay";
+        const string DashSpentDir = NewGameplayDir + "/Dash_Gastado";
+
         const string PlayerAnimDir = ArtRoot + "/Animations/Player";
         const string PortalAnimDir = ArtRoot + "/Animations/Portals";
+        const string VfxAnimDir = ArtRoot + "/Animations/VFX";
+        const string MaterialsDir = ArtRoot + "/Materials";
+        const string VfxPrefabDir = "Assets/_Juego/Prefabs/VFX";
+
         const string PaletteN1Dir = ArtRoot + "/TilePalettes/Nivel1_Grutas";
         const string PaletteN1TilesDir = PaletteN1Dir + "/Tiles";
+        const string PaletteUniversalDir = ArtRoot + "/TilePalettes/Universal";
+        const string PaletteUniversalTilesDir = PaletteUniversalDir + "/Tiles";
 
         const string PlayerControllerPath = PlayerAnimDir + "/PlayerAnimator.controller";
         const string BluePortalControllerPath = PortalAnimDir + "/PortalAzul.controller";
         const string OrangePortalControllerPath = PortalAnimDir + "/PortalNaranja.controller";
+        const string DeathPoofControllerPath = VfxAnimDir + "/Death_Poof.controller";
+        const string DashRechargeControllerPath = VfxAnimDir + "/Dash_Recharge.controller";
 
         const string BluePortalPrefabPath = "Assets/_Juego/Prefabs/PortalAzul.prefab";
         const string OrangePortalPrefabPath = "Assets/_Juego/Prefabs/PortalNaranja.prefab";
+        const string DeathPoofPrefabPath = VfxPrefabDir + "/DeathPoofVFX.prefab";
+        const string DashRechargePrefabPath = VfxPrefabDir + "/DashRechargeVFX.prefab";
+
+        const string CatDashShaderPath = DashSpentDir + "/Gato_DashColor.shader";
+        const string CatDashMaterialPath = MaterialsDir + "/Gato_DashColor.mat";
+        const string SpriteUnlitMaterialPath = "Assets/_Juego/Generated/PurrTales_SpriteUnlit.mat";
 
         const string CatIdleTexPath = ArtRoot + "/Personaje (Rediseñado)/Gato_Negro_Reposo_Idle_Redesign.png";
         const string CatRunTexPath = ArtRoot + "/Personaje (Rediseñado)/Gato_Negro_Corriendo_Run_Redesign.png";
         const string CatWalkTexPath = ArtRoot + "/Personaje (Rediseñado)/Gato_Negro_Caminando_Walk_Redesign.png";
+
+        const string CatJumpTexPath = NewGameplayDir + "/Gato_Negro_Salto_JumpRise_Redesign.png";
+        const string CatFallTexPath = NewGameplayDir + "/Gato_Negro_Caida_Fall_Redesign.png";
+        const string CatWallSlideTexPath = NewGameplayDir + "/Gato_Negro_Pared_WallSlide_Redesign.png";
+        const string CatDashTexPath = NewGameplayDir + "/Gato_Negro_Dash_Redesign.png";
+        const string DeathPoofTexPath = NewGameplayDir + "/Efecto_Muerte_Poof_VFX_Redesign.png";
+        const string DashRechargeTexPath = NewGameplayDir + "/Efecto_Dash_Recarga_VFX_Redesign.png";
+        const string PortalSurfaceUniversalTexPath = NewGameplayDir + "/Superficie_Portal_Universal/Superficie_Portal_Universal.png";
 
         const string PortalBlueFloorTexPath = ArtRoot + "/Purr-tales/Compartido/02_Portal_Salida_Suelo.png";
         const string PortalBlueWallTexPath = ArtRoot + "/Purr-tales/Compartido/02_Portal_Salida_Pared.png";
@@ -51,6 +78,14 @@ namespace PurrTales.EditorTools
 
         const float WorldPPU = 16f;
         const float CatPPU = 32f;
+
+        static readonly string[] UniversalPortalTileNames =
+        {
+            "Esquina_SupIzq", "Borde_Sup", "Esquina_SupDer", "Bloque_Suelto",
+            "Borde_Izq", "Centro", "Borde_Der", "Columna_Arriba",
+            "Esquina_InfIzq", "Borde_Inf", "Esquina_InfDer", "Columna_Centro",
+            "Plataforma_Izq", "Plataforma_Centro", "Plataforma_Der", "Columna_Abajo"
+        };
 
         struct SliceSpec
         {
@@ -88,6 +123,26 @@ namespace PurrTales.EditorTools
             { ArtRoot + "/Personaje (Rediseñado)/Gato_Negro_Durmiendo_2_Sleeping2_Redesign.png", new SliceSpec(100, 100, CatPPU, SpriteAlignment.Center, new Vector2(0.5f, 0.5f), false) },
             { ArtRoot + "/Personaje (Rediseñado)/Gato_Negro_Sentado_Sitting_Redesign.png", new SliceSpec(100, 100, CatPPU, SpriteAlignment.Center, new Vector2(0.5f, 0.5f), false) },
             { ArtRoot + "/Personaje (Rediseñado)/Efecto_Maullido_Meow_VFX_Redesign.png", new SliceSpec(32, 32, CatPPU, SpriteAlignment.Center, new Vector2(0.5f, 0.5f)) },
+
+            // ---- Nuevos Assets de Gameplay: Gato y VFX 100x100 (PPU=32) ----
+            { CatJumpTexPath, new SliceSpec(100, 100, CatPPU, SpriteAlignment.Center, new Vector2(0.5f, 0.5f)) },
+            { CatFallTexPath, new SliceSpec(100, 100, CatPPU, SpriteAlignment.Center, new Vector2(0.5f, 0.5f)) },
+            { CatWallSlideTexPath, new SliceSpec(100, 100, CatPPU, SpriteAlignment.Center, new Vector2(0.5f, 0.5f)) },
+            { CatDashTexPath, new SliceSpec(100, 100, CatPPU, SpriteAlignment.Center, new Vector2(0.5f, 0.5f)) },
+            { DeathPoofTexPath, new SliceSpec(100, 100, CatPPU, SpriteAlignment.Center, new Vector2(0.5f, 0.5f)) },
+
+            // ---- Variantes Dash Gastado 100x100 (PPU=32) ----
+            { DashSpentDir + "/Gato_Negro_Salto_JumpRise_Redesign_DashGastado.png", new SliceSpec(100, 100, CatPPU, SpriteAlignment.Center, new Vector2(0.5f, 0.5f)) },
+            { DashSpentDir + "/Gato_Negro_Caida_Fall_Redesign_DashGastado.png", new SliceSpec(100, 100, CatPPU, SpriteAlignment.Center, new Vector2(0.5f, 0.5f)) },
+            { DashSpentDir + "/Gato_Negro_Pared_WallSlide_Redesign_DashGastado.png", new SliceSpec(100, 100, CatPPU, SpriteAlignment.Center, new Vector2(0.5f, 0.5f)) },
+            { DashSpentDir + "/Gato_Negro_Dash_Redesign_DashGastado.png", new SliceSpec(100, 100, CatPPU, SpriteAlignment.Center, new Vector2(0.5f, 0.5f)) },
+            { DashSpentDir + "/Gato_Negro_Reposo_Idle_Redesign_DashGastado.png", new SliceSpec(100, 100, CatPPU, SpriteAlignment.Center, new Vector2(0.5f, 0.5f)) },
+            { DashSpentDir + "/Gato_Negro_Caminando_Walk_Redesign_DashGastado.png", new SliceSpec(100, 100, CatPPU, SpriteAlignment.Center, new Vector2(0.5f, 0.5f)) },
+            { DashSpentDir + "/Gato_Negro_Corriendo_Run_Redesign_DashGastado.png", new SliceSpec(100, 100, CatPPU, SpriteAlignment.Center, new Vector2(0.5f, 0.5f)) },
+
+            // ---- VFX de Recarga de Dash (32x32, PPU=16) y Superficie Universal de Portales (16x16, PPU=16) ----
+            { DashRechargeTexPath, new SliceSpec(32, 32, WorldPPU, SpriteAlignment.Center, new Vector2(0.5f, 0.5f)) },
+            { PortalSurfaceUniversalTexPath, new SliceSpec(16, 16, WorldPPU, SpriteAlignment.Center, new Vector2(0.5f, 0.5f)) },
 
             // ---- Portales (PPU=16, pivote pegado a la superficie) ----
             { PortalOrangeFloorTexPath, new SliceSpec(32, 16, WorldPPU, SpriteAlignment.Custom, new Vector2(0.5f, 1f / 16f)) },
@@ -134,7 +189,7 @@ namespace PurrTales.EditorTools
                 return;
             }
             Run();
-            EditorUtility.DisplayDialog("Purr-tales", "Integración de sprites, animaciones, portales y Tile Palettes completada.", "OK");
+            EditorUtility.DisplayDialog("Purr-tales", "Integración de sprites, animaciones, VFX, materiales, portales y Tile Palettes completada.", "OK");
         }
 
         /// <summary>Punto de entrada para ejecución manual o por línea de comandos (-executeMethod).</summary>
@@ -155,11 +210,32 @@ namespace PurrTales.EditorTools
             AnimatorController bluePortalController = CreatePortalAnimations("PortalAzul", PortalBlueFloorTexPath, PortalBlueWallTexPath, BluePortalControllerPath);
             AnimatorController orangePortalController = CreatePortalAnimations("PortalNaranja", PortalOrangeFloorTexPath, PortalOrangeWallTexPath, OrangePortalControllerPath);
 
+            GameObject deathPoofPrefab = CreateVfxClipAndPrefab(
+                "Death_Poof",
+                DeathPoofTexPath,
+                16f,
+                VfxAnimDir + "/Death_Poof.anim",
+                DeathPoofControllerPath,
+                DeathPoofPrefabPath,
+                12);
+
+            GameObject dashRechargePrefab = CreateVfxClipAndPrefab(
+                "Dash_Recharge",
+                DashRechargeTexPath,
+                16f,
+                VfxAnimDir + "/Dash_Recharge.anim",
+                DashRechargeControllerPath,
+                DashRechargePrefabPath,
+                12);
+
+            Material catDashMat = CreateOrUpdateCatDashMaterial();
+
             UpdatePortalPrefab(BluePortalPrefabPath, PortalColor.Blue, PortalBlueFloorTexPath, bluePortalController);
             UpdatePortalPrefab(OrangePortalPrefabPath, PortalColor.Orange, PortalOrangeFloorTexPath, orangePortalController);
 
-            UpdatePlayerInScene(playerController);
+            UpdatePlayerInScene(playerController, catDashMat, deathPoofPrefab, dashRechargePrefab);
             CreateLevel1TilePalettes();
+            CreateUniversalPortalSurfacePalette();
 
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
@@ -169,33 +245,89 @@ namespace PurrTales.EditorTools
 
         static void VerifyIntegration()
         {
-            AssertSpritesCount(CatIdleTexPath, 10);
-            AssertSpritesCount(CatWalkTexPath, 8);
-            AssertSpritesCount(CatRunTexPath, 8);
-            AssertSpritesCount(N1TilesetTexPath, 48);
-            AssertSpritesCount(ArtRoot + "/Purr-tales/Nivel2_Torre/N2_Tileset_Torre.png", 48);
-            AssertSpritesCount(ArtRoot + "/Purr-tales/Nivel3_Fortaleza/N3_Tileset_Fortaleza.png", 48);
-            AssertSpritesCount(ArtRoot + "/Purr-tales/Nivel1_Grutas/N1_Slime.png", 11);
-            AssertSpritesCount(ArtRoot + "/Purr-tales/Nivel1_Grutas/N1_Murcielago.png", 11);
-            AssertSpritesCount(N1SpikesTexPath, 4);
-            AssertSpritesCount(ArtRoot + "/Purr-tales/Nivel2_Torre/N2_Pinchos_Hierro.png", 4);
-            AssertSpritesCount(ArtRoot + "/Purr-tales/Nivel2_Torre/N2_Armadura_Animada.png", 11);
-            AssertSpritesCount(ArtRoot + "/Purr-tales/Nivel3_Fortaleza/N3_Craneo_Flotante.png", 11);
-            AssertSpritesCount(ArtRoot + "/Purr-tales/Compartido/Personajes/Hechicera.png", 10);
-            AssertSpritesCount(ArtRoot + "/Purr-tales/Compartido/Personajes/Villano.png", 21);
-            AssertSpritesCount(PortalBlueFloorTexPath, 12);
-            AssertSpritesCount(PortalBlueWallTexPath, 12);
-            AssertSpritesCount(PortalOrangeFloorTexPath, 12);
-            AssertSpritesCount(PortalOrangeWallTexPath, 12);
+            // Sprites existentes
+            AssertSpritesCountAndPpu(CatIdleTexPath, 10, CatPPU);
+            AssertSpritesCountAndPpu(CatWalkTexPath, 8, CatPPU);
+            AssertSpritesCountAndPpu(CatRunTexPath, 8, CatPPU);
 
-            VerifyClip(PlayerAnimDir + "/Idle.anim", 10, 8f);
-            VerifyClip(PlayerAnimDir + "/Walk.anim", 8, 10f);
-            VerifyClip(PlayerAnimDir + "/Run.anim", 8, 16f);
+            // Nuevos sprites de gameplay y VFX
+            AssertSpritesCountAndPpu(CatJumpTexPath, 4, CatPPU);
+            AssertSpritesCountAndPpu(CatFallTexPath, 4, CatPPU);
+            AssertSpritesCountAndPpu(CatWallSlideTexPath, 4, CatPPU);
+            AssertSpritesCountAndPpu(CatDashTexPath, 4, CatPPU);
+            AssertSpritesCountAndPpu(DeathPoofTexPath, 5, CatPPU);
+            AssertSpritesCountAndPpu(DashRechargeTexPath, 4, WorldPPU);
+            AssertSpritesCountAndPpu(PortalSurfaceUniversalTexPath, 64, WorldPPU);
 
+            // Variantes Dash_Gastado
+            AssertSpritesCountAndPpu(DashSpentDir + "/Gato_Negro_Salto_JumpRise_Redesign_DashGastado.png", 4, CatPPU);
+            AssertSpritesCountAndPpu(DashSpentDir + "/Gato_Negro_Caida_Fall_Redesign_DashGastado.png", 4, CatPPU);
+            AssertSpritesCountAndPpu(DashSpentDir + "/Gato_Negro_Pared_WallSlide_Redesign_DashGastado.png", 4, CatPPU);
+            AssertSpritesCountAndPpu(DashSpentDir + "/Gato_Negro_Dash_Redesign_DashGastado.png", 4, CatPPU);
+            AssertSpritesCountAndPpu(DashSpentDir + "/Gato_Negro_Reposo_Idle_Redesign_DashGastado.png", 10, CatPPU);
+            AssertSpritesCountAndPpu(DashSpentDir + "/Gato_Negro_Caminando_Walk_Redesign_DashGastado.png", 8, CatPPU);
+            AssertSpritesCountAndPpu(DashSpentDir + "/Gato_Negro_Corriendo_Run_Redesign_DashGastado.png", 8, CatPPU);
+
+            // Resto de sprites de niveles y portales
+            AssertSpritesCountAndPpu(N1TilesetTexPath, 48, WorldPPU);
+            AssertSpritesCountAndPpu(ArtRoot + "/Purr-tales/Nivel2_Torre/N2_Tileset_Torre.png", 48, WorldPPU);
+            AssertSpritesCountAndPpu(ArtRoot + "/Purr-tales/Nivel3_Fortaleza/N3_Tileset_Fortaleza.png", 48, WorldPPU);
+            AssertSpritesCountAndPpu(ArtRoot + "/Purr-tales/Nivel1_Grutas/N1_Slime.png", 11, WorldPPU);
+            AssertSpritesCountAndPpu(ArtRoot + "/Purr-tales/Nivel1_Grutas/N1_Murcielago.png", 11, WorldPPU);
+            AssertSpritesCountAndPpu(N1SpikesTexPath, 4, WorldPPU);
+            AssertSpritesCountAndPpu(ArtRoot + "/Purr-tales/Nivel2_Torre/N2_Pinchos_Hierro.png", 4, WorldPPU);
+            AssertSpritesCountAndPpu(ArtRoot + "/Purr-tales/Nivel2_Torre/N2_Armadura_Animada.png", 11, WorldPPU);
+            AssertSpritesCountAndPpu(ArtRoot + "/Purr-tales/Nivel3_Fortaleza/N3_Craneo_Flotante.png", 11, WorldPPU);
+            AssertSpritesCountAndPpu(ArtRoot + "/Purr-tales/Compartido/Personajes/Hechicera.png", 10, WorldPPU);
+            AssertSpritesCountAndPpu(ArtRoot + "/Purr-tales/Compartido/Personajes/Villano.png", 21, WorldPPU);
+            AssertSpritesCountAndPpu(PortalBlueFloorTexPath, 12, WorldPPU);
+            AssertSpritesCountAndPpu(PortalBlueWallTexPath, 12, WorldPPU);
+            AssertSpritesCountAndPpu(PortalOrangeFloorTexPath, 12, WorldPPU);
+            AssertSpritesCountAndPpu(PortalOrangeWallTexPath, 12, WorldPPU);
+
+            // Clips de jugador
+            VerifyClip(PlayerAnimDir + "/Idle.anim", 10, 8f, true);
+            VerifyClip(PlayerAnimDir + "/Walk.anim", 8, 10f, true);
+            VerifyClip(PlayerAnimDir + "/Run.anim", 8, 16f, true);
+            VerifyClip(PlayerAnimDir + "/Jump.anim", 4, 12f, false);
+            VerifyClip(PlayerAnimDir + "/Fall.anim", 4, 12f, true);
+            VerifyClip(PlayerAnimDir + "/WallSlide.anim", 4, 10f, true);
+            VerifyClip(PlayerAnimDir + "/Dash.anim", 4, 16f, true);
+
+            // Clips de VFX
+            VerifyClip(VfxAnimDir + "/Death_Poof.anim", 5, 16f, false);
+            VerifyClip(VfxAnimDir + "/Dash_Recharge.anim", 4, 16f, false);
+
+            // PlayerAnimator.controller
             var playerCtrl = AssetDatabase.LoadAssetAtPath<AnimatorController>(PlayerControllerPath);
-            if (playerCtrl == null || playerCtrl.parameters.Length != 3)
-                throw new InvalidOperationException("PlayerAnimator.controller inválido.");
+            if (playerCtrl == null || playerCtrl.parameters.Length != 5)
+                throw new InvalidOperationException("PlayerAnimator.controller debe tener 5 parámetros.");
+            AnimatorStateMachine sm = playerCtrl.layers[0].stateMachine;
+            if (sm.states.Length != 7)
+                throw new InvalidOperationException("PlayerAnimator.controller debe tener 7 estados (encontrados: " + sm.states.Length + ").");
 
+            // Shader y material URP 2D
+            var shader = AssetDatabase.LoadAssetAtPath<Shader>(CatDashShaderPath);
+            if (shader == null || ShaderUtil.ShaderHasError(shader))
+                throw new InvalidOperationException("Gato_DashColor.shader falta o tiene errores de compilación.");
+            ShaderMessage[] shaderMessages = ShaderUtil.GetShaderMessages(shader);
+            if (shaderMessages != null && shaderMessages.Length > 0)
+            {
+                foreach (ShaderMessage msg in shaderMessages)
+                {
+                    Debug.LogError($"[PurrTalesArtSetup] Shader message ({msg.severity}) en {CatDashShaderPath}:{msg.line}: {msg.message} ({msg.messageDetails})");
+                }
+                throw new InvalidOperationException("Gato_DashColor.shader tiene advertencias o errores de compilación (" + shaderMessages.Length + ").");
+            }
+            var catMat = AssetDatabase.LoadAssetAtPath<Material>(CatDashMaterialPath);
+            if (catMat == null || catMat.shader != shader)
+                throw new InvalidOperationException("Gato_DashColor.mat inválido o no usa PurrTales/GatoDashColor.");
+
+            // Prefabs de VFX
+            VerifyVfxPrefab(DeathPoofPrefabPath);
+            VerifyVfxPrefab(DashRechargePrefabPath);
+
+            // Prefabs de portales
             var bluePrefab = AssetDatabase.LoadAssetAtPath<GameObject>(BluePortalPrefabPath);
             var orangePrefab = AssetDatabase.LoadAssetAtPath<GameObject>(OrangePortalPrefabPath);
             if (bluePrefab == null || orangePrefab == null)
@@ -207,26 +339,78 @@ namespace PurrTales.EditorTools
             if (orangePortal.visual == null || orangePortal.visualAnimator == null || orangePortal.visual.sprite == null)
                 throw new InvalidOperationException("PortalNaranja.prefab no tiene visual/visualAnimator/sprite asignados.");
 
+            // Tile Palettes
             var p1 = AssetDatabase.LoadAssetAtPath<GameObject>(PaletteN1Dir + "/Paleta_N1_Grutas_Terreno.prefab");
             var p2 = AssetDatabase.LoadAssetAtPath<GameObject>(PaletteN1Dir + "/Paleta_N1_Grutas_Decoracion_Peligros.prefab");
-            if (p1 == null || p2 == null)
-                throw new InvalidOperationException("Faltan Tile Palettes de Nivel 1.");
+            var pUniversal = AssetDatabase.LoadAssetAtPath<GameObject>(PaletteUniversalDir + "/Paleta_Superficie_Portal_Universal.prefab");
+            if (p1 == null || p2 == null || pUniversal == null)
+                throw new InvalidOperationException("Faltan Tile Palettes de Nivel 1 o Superficie Universal de Portales.");
 
-            Debug.Log("[PurrTalesArtSetup] Verificación OK: slices, clips, PlayerAnimator, prefabs de portales y Tile Palettes de Nivel 1 validados.");
+            int portalLayer = LayerMask.NameToLayer(GameLayers.PortalSurface);
+            if (portalLayer < 0 || pUniversal.layer != portalLayer)
+                throw new InvalidOperationException("Paleta_Superficie_Portal_Universal no está asociada a la Layer PortalSurface.");
+            Transform universalLayerTf = pUniversal.transform.Find("Layer1");
+            if (universalLayerTf == null || universalLayerTf.gameObject.layer != portalLayer)
+                throw new InvalidOperationException("Layer1 de Paleta_Superficie_Portal_Universal no está en la Layer PortalSurface.");
+
+            // Verificar escena PurrTales_Prueba.unity
+            Scene scene = EditorSceneManager.OpenScene(PurrTalesSceneBuilder.GameScenePath, OpenSceneMode.Single);
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            if (player == null) player = GameObject.Find("Player");
+            if (player == null)
+                throw new InvalidOperationException("No se encontró Player en PurrTales_Prueba.unity.");
+            Transform visualTf = player.transform.Find("Visual");
+            if (visualTf == null || visualTf.localScale != Vector3.one)
+                throw new InvalidOperationException("Visual del Player tiene escala incorrecta.");
+            var sr = visualTf.GetComponent<SpriteRenderer>();
+            if (sr == null || sr.sharedMaterial != catMat)
+                throw new InvalidOperationException("Visual del Player no tiene Gato_DashColor.mat asignado.");
+            var death = player.GetComponent<PlayerDeathHandler>();
+            var dash = player.GetComponent<PlayerDash>();
+            if (death == null || death.deathPoofPrefab == null)
+                throw new InvalidOperationException("PlayerDeathHandler no tiene deathPoofPrefab asignado.");
+            if (dash == null || dash.dashRechargeVfxPrefab == null)
+                throw new InvalidOperationException("PlayerDash no tiene dashRechargeVfxPrefab asignado.");
+
+            Debug.Log("[PurrTalesArtSetup] Verificación OK: slices, PPU, clips, PlayerAnimator (5 params / 7 estados), shader URP 2D, VFX prefabs, escena PurrTales_Prueba y Tile Palettes validados.");
         }
 
-        static void AssertSpritesCount(string texPath, int expected)
+        static void VerifyVfxPrefab(string prefabPath)
         {
-            Sprite[] sprites = LoadSlicedSprites(texPath);
-            if (sprites.Length != expected)
-                throw new InvalidOperationException($"Sprite count mismatch en {texPath}: esperado {expected}, encontrado {sprites.Length}");
+            var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(prefabPath);
+            if (prefab == null)
+                throw new InvalidOperationException("Falta prefab VFX: " + prefabPath);
+            if (prefab.GetComponent<SpriteRenderer>() == null ||
+                prefab.GetComponent<Animator>() == null ||
+                prefab.GetComponent<AutoDestroyVFX>() == null)
+            {
+                throw new InvalidOperationException("Prefab VFX incompleto: " + prefabPath);
+            }
         }
 
-        static void VerifyClip(string clipPath, int expectedFrames, float expectedFps)
+        static void AssertSpritesCountAndPpu(string texPath, int expectedCount, float expectedPpu)
+        {
+            var ti = AssetImporter.GetAtPath(texPath) as TextureImporter;
+            if (ti == null)
+                throw new InvalidOperationException("TextureImporter faltante en " + texPath);
+            if (Mathf.Abs(ti.spritePixelsPerUnit - expectedPpu) > 0.01f)
+                throw new InvalidOperationException($"PPU mismatch en {texPath}: esperado {expectedPpu}, encontrado {ti.spritePixelsPerUnit}");
+            if (ti.filterMode != FilterMode.Point)
+                throw new InvalidOperationException($"FilterMode != Point en {texPath}");
+            if (ti.textureCompression != TextureImporterCompression.Uncompressed)
+                throw new InvalidOperationException($"Compression != None en {texPath}");
+
+            Sprite[] sprites = LoadSlicedSprites(texPath);
+            if (sprites.Length != expectedCount)
+                throw new InvalidOperationException($"Sprite count mismatch en {texPath}: esperado {expectedCount}, encontrado {sprites.Length}");
+        }
+
+        static void VerifyClip(string clipPath, int expectedFrames, float expectedFps, bool expectedLoop)
         {
             var clip = AssetDatabase.LoadAssetAtPath<AnimationClip>(clipPath);
             if (clip == null) throw new InvalidOperationException("Falta clip " + clipPath);
-            if (!clip.isLooping) throw new InvalidOperationException("Clip sin loopTime: " + clipPath);
+            if (clip.isLooping != expectedLoop)
+                throw new InvalidOperationException($"LoopTime mismatch en {clipPath}: esperado {expectedLoop}, encontrado {clip.isLooping}");
             EditorCurveBinding[] bindings = AnimationUtility.GetObjectReferenceCurveBindings(clip);
             if (bindings.Length != 1) throw new InvalidOperationException("Curva inválida en " + clipPath);
             ObjectReferenceKeyframe[] keys = AnimationUtility.GetObjectReferenceCurve(clip, bindings[0]);
@@ -242,9 +426,15 @@ namespace PurrTales.EditorTools
             EnsureFolder(ArtRoot, "Animations");
             EnsureFolder(ArtRoot + "/Animations", "Player");
             EnsureFolder(ArtRoot + "/Animations", "Portals");
+            EnsureFolder(ArtRoot + "/Animations", "VFX");
+            EnsureFolder(ArtRoot, "Materials");
             EnsureFolder(ArtRoot, "TilePalettes");
             EnsureFolder(ArtRoot + "/TilePalettes", "Nivel1_Grutas");
             EnsureFolder(PaletteN1Dir, "Tiles");
+            EnsureFolder(ArtRoot + "/TilePalettes", "Universal");
+            EnsureFolder(PaletteUniversalDir, "Tiles");
+            EnsureFolder("Assets/_Juego", "Prefabs");
+            EnsureFolder("Assets/_Juego/Prefabs", "VFX");
         }
 
         static void EnsureFolder(string parent, string name)
@@ -364,7 +554,7 @@ namespace PurrTales.EditorTools
         }
 
         // =====================================================================
-        // 3. Animaciones del Jugador
+        // 3. Animaciones del Jugador, VFX y Portales
         // =====================================================================
 
         static AnimatorController CreatePlayerAnimations()
@@ -372,10 +562,18 @@ namespace PurrTales.EditorTools
             Sprite[] idleSprites = LoadSlicedSprites(CatIdleTexPath);
             Sprite[] walkSprites = LoadSlicedSprites(CatWalkTexPath);
             Sprite[] runSprites = LoadSlicedSprites(CatRunTexPath);
+            Sprite[] jumpSprites = LoadSlicedSprites(CatJumpTexPath);
+            Sprite[] fallSprites = LoadSlicedSprites(CatFallTexPath);
+            Sprite[] wallSlideSprites = LoadSlicedSprites(CatWallSlideTexPath);
+            Sprite[] dashSprites = LoadSlicedSprites(CatDashTexPath);
 
             AnimationClip idleClip = CreateSpriteAnimationClip(PlayerAnimDir + "/Idle.anim", idleSprites, 8f, true);
             AnimationClip walkClip = CreateSpriteAnimationClip(PlayerAnimDir + "/Walk.anim", walkSprites, 10f, true);
             AnimationClip runClip = CreateSpriteAnimationClip(PlayerAnimDir + "/Run.anim", runSprites, 16f, true);
+            AnimationClip jumpClip = CreateSpriteAnimationClip(PlayerAnimDir + "/Jump.anim", jumpSprites, 12f, false);
+            AnimationClip fallClip = CreateSpriteAnimationClip(PlayerAnimDir + "/Fall.anim", fallSprites, 12f, true);
+            AnimationClip wallSlideClip = CreateSpriteAnimationClip(PlayerAnimDir + "/WallSlide.anim", wallSlideSprites, 10f, true);
+            AnimationClip dashClip = CreateSpriteAnimationClip(PlayerAnimDir + "/Dash.anim", dashSprites, 16f, true);
 
             if (File.Exists(PlayerControllerPath)) AssetDatabase.DeleteAsset(PlayerControllerPath);
             AnimatorController controller = AnimatorController.CreateAnimatorControllerAtPath(PlayerControllerPath);
@@ -383,55 +581,190 @@ namespace PurrTales.EditorTools
             controller.AddParameter("Speed", AnimatorControllerParameterType.Float);
             controller.AddParameter("IsGrounded", AnimatorControllerParameterType.Bool);
             controller.AddParameter("IsDashing", AnimatorControllerParameterType.Bool);
+            controller.AddParameter("VerticalVelocity", AnimatorControllerParameterType.Float);
+            controller.AddParameter("IsWallSliding", AnimatorControllerParameterType.Bool);
 
             AnimatorStateMachine sm = controller.layers[0].stateMachine;
+
             AnimatorState idleState = sm.AddState("Idle", new Vector3(260, 120, 0));
             idleState.motion = idleClip;
             sm.defaultState = idleState;
 
-            AnimatorState walkState = sm.AddState("Walk", new Vector3(520, 40, 0));
+            AnimatorState walkState = sm.AddState("Walk", new Vector3(540, 40, 0));
             walkState.motion = walkClip;
 
-            AnimatorState runState = sm.AddState("Run", new Vector3(520, 200, 0));
+            AnimatorState runState = sm.AddState("Run", new Vector3(540, 200, 0));
             runState.motion = runClip;
 
-            // Idle -> Walk
+            AnimatorState jumpState = sm.AddState("Jump", new Vector3(260, -100, 0));
+            jumpState.motion = jumpClip;
+
+            AnimatorState fallState = sm.AddState("Fall", new Vector3(260, 320, 0));
+            fallState.motion = fallClip;
+
+            AnimatorState wallSlideState = sm.AddState("WallSlide", new Vector3(0, 320, 0));
+            wallSlideState.motion = wallSlideClip;
+
+            AnimatorState dashState = sm.AddState("Dash", new Vector3(0, -100, 0));
+            dashState.motion = dashClip;
+
+            // ---------- Transiciones AnyState (prioridad: Dash > WallSlide > Jump > Fall) ----------
+            AnimatorStateTransition anyToDash = AddInstantAnyStateTransition(sm, dashState);
+            anyToDash.AddCondition(AnimatorConditionMode.If, 0f, "IsDashing");
+
+            AnimatorStateTransition anyToWallSlide = AddInstantAnyStateTransition(sm, wallSlideState);
+            anyToWallSlide.AddCondition(AnimatorConditionMode.If, 0f, "IsWallSliding");
+            anyToWallSlide.AddCondition(AnimatorConditionMode.IfNot, 0f, "IsGrounded");
+            anyToWallSlide.AddCondition(AnimatorConditionMode.IfNot, 0f, "IsDashing");
+
+            AnimatorStateTransition anyToJump = AddInstantAnyStateTransition(sm, jumpState);
+            anyToJump.AddCondition(AnimatorConditionMode.IfNot, 0f, "IsGrounded");
+            anyToJump.AddCondition(AnimatorConditionMode.Greater, 0.5f, "VerticalVelocity");
+            anyToJump.AddCondition(AnimatorConditionMode.IfNot, 0f, "IsWallSliding");
+            anyToJump.AddCondition(AnimatorConditionMode.IfNot, 0f, "IsDashing");
+
+            AnimatorStateTransition anyToFall = AddInstantAnyStateTransition(sm, fallState);
+            anyToFall.AddCondition(AnimatorConditionMode.IfNot, 0f, "IsGrounded");
+            anyToFall.AddCondition(AnimatorConditionMode.Less, -0.5f, "VerticalVelocity");
+            anyToFall.AddCondition(AnimatorConditionMode.IfNot, 0f, "IsWallSliding");
+            anyToFall.AddCondition(AnimatorConditionMode.IfNot, 0f, "IsDashing");
+
+            // ---------- Movimiento en suelo (Idle <-> Walk <-> Run) ----------
+            AnimatorStateTransition tIdleToRun = AddInstantTransition(idleState, runState);
+            tIdleToRun.AddCondition(AnimatorConditionMode.If, 0f, "IsGrounded");
+            tIdleToRun.AddCondition(AnimatorConditionMode.IfNot, 0f, "IsDashing");
+            tIdleToRun.AddCondition(AnimatorConditionMode.Greater, 3.5f, "Speed");
+
             AnimatorStateTransition tIdleToWalk = AddInstantTransition(idleState, walkState);
-            tIdleToWalk.AddCondition(AnimatorConditionMode.Greater, 0.1f, "Speed");
+            tIdleToWalk.AddCondition(AnimatorConditionMode.If, 0f, "IsGrounded");
             tIdleToWalk.AddCondition(AnimatorConditionMode.IfNot, 0f, "IsDashing");
+            tIdleToWalk.AddCondition(AnimatorConditionMode.Greater, 0.1f, "Speed");
 
-            // Idle -> Run (velocidad alta o dash)
-            AnimatorStateTransition tIdleToRunSpeed = AddInstantTransition(idleState, runState);
-            tIdleToRunSpeed.AddCondition(AnimatorConditionMode.Greater, 3.5f, "Speed");
+            AnimatorStateTransition tWalkToRun = AddInstantTransition(walkState, runState);
+            tWalkToRun.AddCondition(AnimatorConditionMode.If, 0f, "IsGrounded");
+            tWalkToRun.AddCondition(AnimatorConditionMode.IfNot, 0f, "IsDashing");
+            tWalkToRun.AddCondition(AnimatorConditionMode.Greater, 3.5f, "Speed");
 
-            AnimatorStateTransition tIdleToRunDash = AddInstantTransition(idleState, runState);
-            tIdleToRunDash.AddCondition(AnimatorConditionMode.If, 0f, "IsDashing");
-
-            // Walk -> Run
-            AnimatorStateTransition tWalkToRunSpeed = AddInstantTransition(walkState, runState);
-            tWalkToRunSpeed.AddCondition(AnimatorConditionMode.Greater, 3.5f, "Speed");
-
-            AnimatorStateTransition tWalkToRunDash = AddInstantTransition(walkState, runState);
-            tWalkToRunDash.AddCondition(AnimatorConditionMode.If, 0f, "IsDashing");
-
-            // Walk -> Idle
             AnimatorStateTransition tWalkToIdle = AddInstantTransition(walkState, idleState);
-            tWalkToIdle.AddCondition(AnimatorConditionMode.Less, 0.1f, "Speed");
+            tWalkToIdle.AddCondition(AnimatorConditionMode.If, 0f, "IsGrounded");
             tWalkToIdle.AddCondition(AnimatorConditionMode.IfNot, 0f, "IsDashing");
+            tWalkToIdle.AddCondition(AnimatorConditionMode.Less, 0.1f, "Speed");
 
-            // Run -> Walk (solo en suelo cuando desacelera)
+            AnimatorStateTransition tRunToIdle = AddInstantTransition(runState, idleState);
+            tRunToIdle.AddCondition(AnimatorConditionMode.If, 0f, "IsGrounded");
+            tRunToIdle.AddCondition(AnimatorConditionMode.IfNot, 0f, "IsDashing");
+            tRunToIdle.AddCondition(AnimatorConditionMode.Less, 0.1f, "Speed");
+
             AnimatorStateTransition tRunToWalk = AddInstantTransition(runState, walkState);
-            tRunToWalk.AddCondition(AnimatorConditionMode.Less, 3.0f, "Speed");
             tRunToWalk.AddCondition(AnimatorConditionMode.If, 0f, "IsGrounded");
             tRunToWalk.AddCondition(AnimatorConditionMode.IfNot, 0f, "IsDashing");
+            tRunToWalk.AddCondition(AnimatorConditionMode.Less, 3.0f, "Speed");
 
-            // Run -> Idle
-            AnimatorStateTransition tRunToIdle = AddInstantTransition(runState, idleState);
-            tRunToIdle.AddCondition(AnimatorConditionMode.Less, 0.1f, "Speed");
-            tRunToIdle.AddCondition(AnimatorConditionMode.IfNot, 0f, "IsDashing");
+            // ---------- Aterrizaje desde estados de aire/pared/dash hacia Run / Walk / Idle ----------
+            AddLandingTransitions(jumpState, idleState, walkState, runState);
+            AddLandingTransitions(fallState, idleState, walkState, runState);
+            AddLandingTransitions(wallSlideState, idleState, walkState, runState);
+            AddLandingTransitions(dashState, idleState, walkState, runState);
+
+            // ---------- Salida en aire desde Dash y WallSlide (incluye tramo -0.5..0.5 de VerticalVelocity) ----------
+            AnimatorStateTransition tDashToFall = AddInstantTransition(dashState, fallState);
+            tDashToFall.AddCondition(AnimatorConditionMode.IfNot, 0f, "IsDashing");
+            tDashToFall.AddCondition(AnimatorConditionMode.IfNot, 0f, "IsGrounded");
+            tDashToFall.AddCondition(AnimatorConditionMode.IfNot, 0f, "IsWallSliding");
+            tDashToFall.AddCondition(AnimatorConditionMode.Less, 0.5f, "VerticalVelocity");
+
+            AnimatorStateTransition tWallSlideToFall = AddInstantTransition(wallSlideState, fallState);
+            tWallSlideToFall.AddCondition(AnimatorConditionMode.IfNot, 0f, "IsWallSliding");
+            tWallSlideToFall.AddCondition(AnimatorConditionMode.IfNot, 0f, "IsGrounded");
+            tWallSlideToFall.AddCondition(AnimatorConditionMode.IfNot, 0f, "IsDashing");
+            tWallSlideToFall.AddCondition(AnimatorConditionMode.Less, 0.5f, "VerticalVelocity");
 
             EditorUtility.SetDirty(controller);
             return controller;
+        }
+
+        static void AddLandingTransitions(AnimatorState from, AnimatorState idleState, AnimatorState walkState, AnimatorState runState)
+        {
+            // Orden: Run (> 3.5) -> Walk (> 0.1) -> Idle (< 0.1)
+            AnimatorStateTransition toRun = AddInstantTransition(from, runState);
+            toRun.AddCondition(AnimatorConditionMode.If, 0f, "IsGrounded");
+            toRun.AddCondition(AnimatorConditionMode.IfNot, 0f, "IsDashing");
+            toRun.AddCondition(AnimatorConditionMode.Greater, 3.5f, "Speed");
+
+            AnimatorStateTransition toWalk = AddInstantTransition(from, walkState);
+            toWalk.AddCondition(AnimatorConditionMode.If, 0f, "IsGrounded");
+            toWalk.AddCondition(AnimatorConditionMode.IfNot, 0f, "IsDashing");
+            toWalk.AddCondition(AnimatorConditionMode.Greater, 0.1f, "Speed");
+
+            AnimatorStateTransition toIdle = AddInstantTransition(from, idleState);
+            toIdle.AddCondition(AnimatorConditionMode.If, 0f, "IsGrounded");
+            toIdle.AddCondition(AnimatorConditionMode.IfNot, 0f, "IsDashing");
+            toIdle.AddCondition(AnimatorConditionMode.Less, 0.1f, "Speed");
+        }
+
+        static GameObject CreateVfxClipAndPrefab(
+            string stateName,
+            string texPath,
+            float fps,
+            string clipPath,
+            string controllerPath,
+            string prefabPath,
+            int sortingOrder)
+        {
+            Sprite[] sprites = LoadSlicedSprites(texPath);
+            AnimationClip clip = CreateSpriteAnimationClip(clipPath, sprites, fps, false);
+
+            if (File.Exists(controllerPath)) AssetDatabase.DeleteAsset(controllerPath);
+            AnimatorController controller = AnimatorController.CreateAnimatorControllerAtPath(controllerPath);
+            AnimatorStateMachine sm = controller.layers[0].stateMachine;
+            AnimatorState state = sm.AddState(stateName, new Vector3(260, 100, 0));
+            state.motion = clip;
+            sm.defaultState = state;
+            EditorUtility.SetDirty(controller);
+
+            Material vfxMat = AssetDatabase.LoadAssetAtPath<Material>(SpriteUnlitMaterialPath);
+            var go = new GameObject(Path.GetFileNameWithoutExtension(prefabPath));
+            var sr = go.AddComponent<SpriteRenderer>();
+            sr.sprite = sprites[0];
+            if (vfxMat != null) sr.sharedMaterial = vfxMat;
+            sr.color = Color.white;
+            sr.sortingOrder = sortingOrder;
+
+            var anim = go.AddComponent<Animator>();
+            anim.runtimeAnimatorController = controller;
+
+            var autoDestroy = go.AddComponent<AutoDestroyVFX>();
+            autoDestroy.fallbackDuration = sprites.Length / fps;
+
+            GameObject prefab = PrefabUtility.SaveAsPrefabAsset(go, prefabPath);
+            UnityEngine.Object.DestroyImmediate(go);
+            EditorUtility.SetDirty(prefab);
+            return prefab;
+        }
+
+        static Material CreateOrUpdateCatDashMaterial()
+        {
+            Shader shader = AssetDatabase.LoadAssetAtPath<Shader>(CatDashShaderPath);
+            if (shader == null) shader = Shader.Find("PurrTales/GatoDashColor");
+            if (shader == null)
+                throw new InvalidOperationException("No se encontró el shader PurrTales/GatoDashColor en " + CatDashShaderPath);
+
+            Material mat = AssetDatabase.LoadAssetAtPath<Material>(CatDashMaterialPath);
+            if (mat == null)
+            {
+                mat = new Material(shader);
+                AssetDatabase.CreateAsset(mat, CatDashMaterialPath);
+            }
+            else
+            {
+                mat.shader = shader;
+            }
+
+            mat.SetColor("_Color", Color.white);
+            mat.SetFloat("_DashListo", 1f);
+            mat.SetFloat("_Brillo", 0.25f);
+            EditorUtility.SetDirty(mat);
+            return mat;
         }
 
         static AnimatorController CreatePortalAnimations(string prefix, string floorTexPath, string wallTexPath, string controllerPath)
@@ -472,6 +805,18 @@ namespace PurrTales.EditorTools
             t.duration = 0f;
             t.hasFixedDuration = true;
             t.offset = 0f;
+            return t;
+        }
+
+        static AnimatorStateTransition AddInstantAnyStateTransition(AnimatorStateMachine sm, AnimatorState to)
+        {
+            AnimatorStateTransition t = sm.AddAnyStateTransition(to);
+            t.hasExitTime = false;
+            t.exitTime = 0f;
+            t.duration = 0f;
+            t.hasFixedDuration = true;
+            t.offset = 0f;
+            t.canTransitionToSelf = false;
             return t;
         }
 
@@ -585,7 +930,11 @@ namespace PurrTales.EditorTools
             }
         }
 
-        static void UpdatePlayerInScene(AnimatorController playerController)
+        static void UpdatePlayerInScene(
+            AnimatorController playerController,
+            Material catDashMat,
+            GameObject deathPoofPrefab,
+            GameObject dashRechargePrefab)
         {
             string scenePath = PurrTalesSceneBuilder.GameScenePath;
             if (!File.Exists(scenePath))
@@ -620,6 +969,7 @@ namespace PurrTales.EditorTools
             var sr = visualTf.GetComponent<SpriteRenderer>();
             if (sr == null) sr = visualTf.gameObject.AddComponent<SpriteRenderer>();
             if (idleSprites.Length > 0) sr.sprite = idleSprites[0];
+            if (catDashMat != null) sr.sharedMaterial = catDashMat;
             sr.color = Color.white;
             sr.sortingOrder = 10;
 
@@ -639,6 +989,7 @@ namespace PurrTales.EditorTools
             if (dash != null)
             {
                 dash.spriteRenderer = sr;
+                dash.dashRechargeVfxPrefab = dashRechargePrefab;
                 EditorUtility.SetDirty(dash);
             }
 
@@ -646,6 +997,7 @@ namespace PurrTales.EditorTools
             if (death != null)
             {
                 death.spriteRenderer = sr;
+                death.deathPoofPrefab = deathPoofPrefab;
                 EditorUtility.SetDirty(death);
             }
 
@@ -654,7 +1006,7 @@ namespace PurrTales.EditorTools
         }
 
         // =====================================================================
-        // 5. Tile Palettes para Nivel 1 (Grutas)
+        // 5. Tile Palettes (Nivel 1 y Superficie Universal de Portales)
         // =====================================================================
 
         static void CreateLevel1TilePalettes()
@@ -664,6 +1016,7 @@ namespace PurrTales.EditorTools
             BuildGridPalette(
                 PaletteN1Dir + "/Paleta_N1_Grutas_Terreno.prefab",
                 "Paleta_N1_Grutas_Terreno",
+                0,
                 (tilemap) =>
                 {
                     const int cols = 8;
@@ -688,6 +1041,7 @@ namespace PurrTales.EditorTools
             BuildGridPalette(
                 PaletteN1Dir + "/Paleta_N1_Grutas_Decoracion_Peligros.prefab",
                 "Paleta_N1_Grutas_Decoracion_Peligros",
+                0,
                 (tilemap) =>
                 {
                     // Fila 2: Plataformas (0..3 con collider) y Decoración (4..7 sin collider)
@@ -723,6 +1077,53 @@ namespace PurrTales.EditorTools
                 });
         }
 
+        static void CreateUniversalPortalSurfacePalette()
+        {
+            Sprite[] sheetSprites = LoadSlicedSprites(PortalSurfaceUniversalTexPath);
+            if (sheetSprites.Length != 64)
+                throw new InvalidOperationException("Superficie_Portal_Universal.png debe tener 64 sprites (16x4), encontrados: " + sheetSprites.Length);
+
+            int portalSurfaceLayer = LayerMask.NameToLayer(GameLayers.PortalSurface);
+            if (portalSurfaceLayer < 0)
+                throw new InvalidOperationException("No existe la Layer 'PortalSurface' en ProjectSettings/TagManager.asset.");
+
+            // Hoja: 4x4 por frame, 4 frames horizontales (16 cols x 4 rows), 150 ms por frame (~6.67 FPS).
+            const int tileCols = 4;
+            const int tileRows = 4;
+            const int frameCount = 4;
+            const int sheetCols = tileCols * frameCount;
+            const float animFps = 1000f / 150f;
+
+            BuildGridPalette(
+                PaletteUniversalDir + "/Paleta_Superficie_Portal_Universal.prefab",
+                "Paleta_Superficie_Portal_Universal",
+                portalSurfaceLayer,
+                (tilemap) =>
+                {
+                    for (int row = 0; row < tileRows; row++)
+                    {
+                        for (int col = 0; col < tileCols; col++)
+                        {
+                            int tileIdx = row * tileCols + col;
+                            var frames = new Sprite[frameCount];
+                            for (int f = 0; f < frameCount; f++)
+                            {
+                                int spriteIndex = row * sheetCols + (f * tileCols + col);
+                                frames[f] = sheetSprites[spriteIndex];
+                            }
+
+                            string tileName = tileIdx < UniversalPortalTileNames.Length
+                                ? UniversalPortalTileNames[tileIdx]
+                                : ("Tile_" + tileIdx);
+                            string assetPath = $"{PaletteUniversalTilesDir}/PortalSurface_{tileIdx:D2}_{tileName}.asset";
+
+                            AnimatedTile animTile = CreateOrUpdateAnimatedTileAsset(assetPath, frames, animFps, Tile.ColliderType.Grid);
+                            tilemap.SetTile(new Vector3Int(col, (tileRows - 1) - row, 0), animTile);
+                        }
+                    }
+                });
+        }
+
         static Tile CreateOrUpdateTileAsset(string assetPath, Sprite sprite, Tile.ColliderType colliderType)
         {
             Tile tile = AssetDatabase.LoadAssetAtPath<Tile>(assetPath);
@@ -738,17 +1139,37 @@ namespace PurrTales.EditorTools
             return tile;
         }
 
-        static void BuildGridPalette(string prefabPath, string paletteName, Action<Tilemap> populate)
+        static AnimatedTile CreateOrUpdateAnimatedTileAsset(string assetPath, Sprite[] frames, float fps, Tile.ColliderType colliderType)
+        {
+            AnimatedTile tile = AssetDatabase.LoadAssetAtPath<AnimatedTile>(assetPath);
+            if (tile == null)
+            {
+                tile = ScriptableObject.CreateInstance<AnimatedTile>();
+                AssetDatabase.CreateAsset(tile, assetPath);
+            }
+            tile.m_AnimatedSprites = frames;
+            tile.m_MinSpeed = fps;
+            tile.m_MaxSpeed = fps;
+            tile.m_AnimationStartTime = 0f;
+            tile.m_AnimationStartFrame = 0;
+            tile.m_TileColliderType = colliderType;
+            EditorUtility.SetDirty(tile);
+            return tile;
+        }
+
+        static void BuildGridPalette(string prefabPath, string paletteName, int layerIndex, Action<Tilemap> populate)
         {
             if (File.Exists(prefabPath)) AssetDatabase.DeleteAsset(prefabPath);
 
             var root = new GameObject(paletteName);
+            root.layer = layerIndex;
             var grid = root.AddComponent<Grid>();
             grid.cellLayout = GridLayout.CellLayout.Rectangle;
             grid.cellSize = new Vector3(1f, 1f, 0f);
             grid.cellGap = Vector3.zero;
 
             var layer = new GameObject("Layer1");
+            layer.layer = layerIndex;
             layer.transform.SetParent(root.transform, false);
             var tilemap = layer.AddComponent<Tilemap>();
             var renderer = layer.AddComponent<TilemapRenderer>();

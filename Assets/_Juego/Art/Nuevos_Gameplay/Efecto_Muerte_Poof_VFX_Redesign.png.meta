@@ -1,0 +1,307 @@
+fileFormatVersion: 2
+guid: 02c2886abd8f332318d007ff576e1f05
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8103421300118463783
+    second: Efecto_Muerte_Poof_VFX_Redesign_0
+  - first:
+      213: 8910287226804796221
+    second: Efecto_Muerte_Poof_VFX_Redesign_1
+  - first:
+      213: -6361854081467730948
+    second: Efecto_Muerte_Poof_VFX_Redesign_2
+  - first:
+      213: 3265132830413416172
+    second: Efecto_Muerte_Poof_VFX_Redesign_3
+  - first:
+      213: -623531729088385781
+    second: Efecto_Muerte_Poof_VFX_Redesign_4
+  - first:
+      213: 6696094073917599971
+    second: Efecto_Muerte_Poof_VFX_Redesign_5
+  - first:
+      213: -7027228171822801683
+    second: Efecto_Muerte_Poof_VFX_Redesign_6
+  - first:
+      213: 1963357241463716213
+    second: Efecto_Muerte_Poof_VFX_Redesign_7
+  - first:
+      213: -5566222776852667314
+    second: Efecto_Muerte_Poof_VFX_Redesign_8
+  - first:
+      213: -5625051854355873957
+    second: Efecto_Muerte_Poof_VFX_Redesign_9
+  - first:
+      213: 8153835008409731786
+    second: Efecto_Muerte_Poof_VFX_Redesign_10
+  - first:
+      213: 6468487319123463884
+    second: Efecto_Muerte_Poof_VFX_Redesign_11
+  - first:
+      213: -3336010442101077006
+    second: Efecto_Muerte_Poof_VFX_Redesign_12
+  - first:
+      213: 2973362484155819193
+    second: Efecto_Muerte_Poof_VFX_Redesign_13
+  - first:
+      213: -4469824228191231448
+    second: Efecto_Muerte_Poof_VFX_Redesign_14
+  - first:
+      213: -3970475531621432436
+    second: Efecto_Muerte_Poof_VFX_Redesign_15
+  - first:
+      213: -2987758464748802502
+    second: Efecto_Muerte_Poof_VFX_Redesign_16
+  - first:
+      213: -6575290725322562897
+    second: Efecto_Muerte_Poof_VFX_Redesign_17
+  - first:
+      213: -1314636392365465297
+    second: Efecto_Muerte_Poof_VFX_Redesign_18
+  - first:
+      213: 6607550561853043898
+    second: Efecto_Muerte_Poof_VFX_Redesign_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Efecto_Muerte_Poof_VFX_Redesign_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dada15e24dda8f80800000000000000
+      internalID: -8103421300118463783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Efecto_Muerte_Poof_VFX_Redesign_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3b76682603b7ab70800000000000000
+      internalID: 8910287226804796221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Efecto_Muerte_Poof_VFX_Redesign_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf33f316b6726b7a0800000000000000
+      internalID: -6361854081467730948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Efecto_Muerte_Poof_VFX_Redesign_3
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce6e1458205105d20800000000000000
+      internalID: 3265132830413416172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Efecto_Muerte_Poof_VFX_Redesign_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0d608d2235c857f0800000000000000
+      internalID: -623531729088385781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: dc9b3fdf7dd7347c9b36843fa9684eee
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Efecto_Muerte_Poof_VFX_Redesign_0: -8103421300118463783
+      Efecto_Muerte_Poof_VFX_Redesign_1: 8910287226804796221
+      Efecto_Muerte_Poof_VFX_Redesign_10: 8153835008409731786
+      Efecto_Muerte_Poof_VFX_Redesign_11: 6468487319123463884
+      Efecto_Muerte_Poof_VFX_Redesign_12: -3336010442101077006
+      Efecto_Muerte_Poof_VFX_Redesign_13: 2973362484155819193
+      Efecto_Muerte_Poof_VFX_Redesign_14: -4469824228191231448
+      Efecto_Muerte_Poof_VFX_Redesign_15: -3970475531621432436
+      Efecto_Muerte_Poof_VFX_Redesign_16: -2987758464748802502
+      Efecto_Muerte_Poof_VFX_Redesign_17: -6575290725322562897
+      Efecto_Muerte_Poof_VFX_Redesign_18: -1314636392365465297
+      Efecto_Muerte_Poof_VFX_Redesign_19: 6607550561853043898
+      Efecto_Muerte_Poof_VFX_Redesign_2: -6361854081467730948
+      Efecto_Muerte_Poof_VFX_Redesign_3: 3265132830413416172
+      Efecto_Muerte_Poof_VFX_Redesign_4: -623531729088385781
+      Efecto_Muerte_Poof_VFX_Redesign_5: 6696094073917599971
+      Efecto_Muerte_Poof_VFX_Redesign_6: -7027228171822801683
+      Efecto_Muerte_Poof_VFX_Redesign_7: 1963357241463716213
+      Efecto_Muerte_Poof_VFX_Redesign_8: -5566222776852667314
+      Efecto_Muerte_Poof_VFX_Redesign_9: -5625051854355873957
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
